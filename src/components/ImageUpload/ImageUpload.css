@@ -1,12 +1,12 @@
 body {
-  margin: 50px; 
+  margin: 60px; 
 }
 
 .bg-image {
   background-image: url("splash.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh; 
+  height: 90vh; 
   align-items: center;
 }
 
@@ -14,7 +14,7 @@ h1,
 h2,
 h3,
 li { 
-  color: darkgrey;
+  color: #232325;
 }
 
 li {
@@ -40,6 +40,7 @@ button {
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
+  border-radius: 50px; 
 }
 
 button:hover {

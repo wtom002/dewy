@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './ImageUpload.css';
 
 export default function ImageUpload() {
@@ -8,7 +8,7 @@ export default function ImageUpload() {
         const videoElement = document.createElement('video');
         videoElement.srcObject = stream;
         videoElement.play();
-        document.body.appendChild(videoElement);
+        document.getElementById('camera-preview').appendChild(videoElement);
       })
       .catch((error) => {
         console.error('Error accessing the camera:', error);
@@ -16,30 +16,39 @@ export default function ImageUpload() {
   };
 
   const handleUploadImage = () => {
-    //trigger file input prompt
     fileInputRef.current.click();
   };
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // handle the uploaded file send to model
       console.log('Uploaded file:', file);
     }
   };
 
   const fileInputRef = useRef(null);
 
+  useEffect(() => {
+    return () => {
+      const videoElement = document.querySelector('video');
+      if (videoElement) {
+        videoElement.srcObject.getTracks().forEach(track => track.stop());
+      }
+    };
+  }, []);
+
   return (
+    <div className="image-upload">
     <div className="container-fluid bg-image rounded p-4">
       <div className="row">
         <div className="col-md-6 p-5">
           <h1>dewy</h1>
+          <div id="camera-preview"></div>
         </div>
         <div className="col-md-6 p-5">
           <nav>
             <ul className="list-inline">
-              <li className="list-inline-item mr-3">Scan</li>
+              <li className="list-inline-item mr-3" onClick={handleScanNow}>Scan</li>
               <li className="list-inline-item mr-3">Ingredeniary</li>
               <li className="list-inline-item">About Us</li>
             </ul>
@@ -47,10 +56,9 @@ export default function ImageUpload() {
           <div className="d-flex align-items-center text-center mx-auto vh-100">
             <div>
               <h2>instant skin analysis</h2>
-              <h3>smart scan. targeted care.</h3>
               <div className="mt-4">
-                <button className="btn btn-primary mr-2" onClick={handleScanNow}>SCAN NOW</button>
-                <button className="btn btn-secondary" onClick={handleUploadImage}>UPLOAD IMAGE</button>
+                <button onClick={handleScanNow}>SCAN NOW</button>
+                <button onClick={handleUploadImage}>UPLOAD IMAGE</button>
                 <input
                   type="file"
                   accept="image/*"
@@ -63,6 +71,7 @@ export default function ImageUpload() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 }
