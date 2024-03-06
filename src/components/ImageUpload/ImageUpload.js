@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './ImageUpload.css';
+import NavBar from '../NavBar/NavBar';
 
 export default function ImageUpload() {
   const handleScanNow = () => {
@@ -46,13 +47,7 @@ export default function ImageUpload() {
           <div id="camera-preview"></div>
         </div>
         <div className="col-md-6 p-5">
-          <nav>
-            <ul className="list-inline">
-              <li className="list-inline-item mr-3" onClick={handleScanNow}>Scan</li>
-              <li className="list-inline-item mr-3">Ingredeniary</li>
-              <li className="list-inline-item">About Us</li>
-            </ul>
-          </nav>
+          <NavBar/>
           <div className="d-flex align-items-center text-center mx-auto vh-100">
             <div>
               <h2>instant skin analysis</h2>

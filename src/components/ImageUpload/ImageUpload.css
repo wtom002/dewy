@@ -10,11 +10,19 @@ body {
   align-items: center;
 }
 
+.col-md-6:first-child {
+  margin-left: 100px;
+}
+
+.col-md-6:last-child {
+  margin-right: 100px;
+}
+
 h1,
 h2,
 h3,
 li { 
-  color: #232325;
+  color: #505050;
 }
 
 li {
@@ -35,8 +43,8 @@ h2 {
 
 button {
   background-color: transparent;
-  color: darkgrey;
-  border: 2px solid darkgrey;
+  color: #505050;
+  border: 2px solid #505050;
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
@@ -44,6 +52,6 @@ button {
 }
 
 button:hover {
-  background-color: darkgrey;
+  background-color: #505050;
   color: white;
 }
