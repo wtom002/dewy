@@ -1,0 +1,48 @@
+body {
+  margin: 50px; 
+}
+
+.bg-image {
+  background-image: url("splash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+li { 
+  color: darkgrey;
+}
+
+li {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-right: 120px;
+}
+
+h1 {
+  font-size: 4em; 
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em; 
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  color: darkgrey;
+  border: 2px solid darkgrey;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgrey;
+  color: white;
+}

@@ -1,7 +1,12 @@
-import React from 'react'
+import logo from './logo.svg';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import ImageUpload from './components/ImageUpload/ImageUpload';
 
-export default function App() {
+function App() {
   return (
-    <div>App</div>
-  )
+    <ImageUpload/>
+  );
 }
+
+export default App;
