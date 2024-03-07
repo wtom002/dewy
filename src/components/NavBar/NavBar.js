@@ -1,13 +1,15 @@
 import React from 'react'
+import './NavBar.css';
 
 export default function NavBar() {
   return (
-    <nav>
-        <ul className="list-inline">
-            <li className="list-inline-item mr-3">SCAN</li>
-            <li className="list-inline-item mr-3">INGREDINARY</li>
-            <li className="list-inline-item">ABOUT US</li>
-        </ul>
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li className="logo">dewy</li>
+        <li><a href="/">SCAN</a></li>
+        <li><a href="/about">INGREDINARY</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+      </ul>
     </nav>
-  )
+  );
 }
