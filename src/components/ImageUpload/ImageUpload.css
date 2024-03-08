@@ -10,12 +10,8 @@ body {
   align-items: center;
 }
 
-.col-md-6:first-child {
-  margin-left: 100px;
-}
-
 .col-md-6:last-child {
-  margin-right: 100px;
+  margin-top: 15vh;
 }
 
 h1,
@@ -31,14 +27,15 @@ li {
   padding-right: 120px;
 }
 
-h1 {
-  font-size: 4em; 
+h1, h2 {
+  font-size: 3em; 
   font-weight: bold;
 }
 
-h2 {
-  font-size: 2em; 
-  font-weight: bold;
+
+h3 {
+  font-size: 1.5em; 
+  font-weight: lighter;
 }
 
 button {
