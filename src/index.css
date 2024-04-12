@@ -11,3 +11,284 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Scan */
+body {
+  margin: 60px; 
+}
+
+.bg-image {
+  background-image: url("img/Scan.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh; 
+  align-items: center;
+}
+
+.col-md-6:first-child {
+  margin-left: 100px;
+}
+
+.col-md-6:last-child {
+  margin-right: 100px;
+}
+
+h1,
+h2,
+h3,
+li { 
+  color: #505050;
+}
+
+li {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-right: 120px;
+}
+
+h1 {
+  font-size: 4em; 
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em; 
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  color: #505050;
+  border: 2px solid #505050;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50px; 
+}
+
+button:hover {
+  background-color: #505050;
+  color: white;
+}
+/* Results */
+
+* {
+  margin: 0  ;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-image {
+  background-image: url("img/Results.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh; 
+  align-items: center;
+}
+
+.boxContainer {
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px; 
+  right: 20px;  
+  top: 20px;   
+  width: 98%;
+  height: 30em;
+  padding-left: 110px; 
+  background-color: #E0EAEF;
+  border-radius: 10px;
+}
+.results-heading {
+  color: #505050;
+  font-family: Open sans-serif;
+  margin-top: 520px;
+  padding-left: 110px; 
+  margin-bottom: 20px;
+  padding-right: 800px; 
+  font-size: 35px; 
+}
+
+.boxContainer h1 {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 950px; 
+  padding-left: 35px; 
+  font-size: 40px; 
+}
+
+.boxContainer h2 {
+  padding-left: 35px;
+  font-family: Open sans-serif;
+  padding-right: 950px; 
+  font-size: 20px;  
+  color: #505050;
+  margin-top: 10px;
+}
+
+.boxContainer button {
+  margin-top: 15px;
+  margin-left: 35px;
+  padding: 7px 20px;
+  font-size: 14px;
+  color:  #505050;
+  border-color:  #505050;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+.boxContainer button:hover {
+  background-color: white; 
+  border-color:  #505050;
+}
+
+hr {
+  border: 1px solid 505050; /* Set the color and style of the line */
+  margin-top: 20px;
+  font-size: 24px; 
+}
+
+.cards-container  {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: #E0EAEF;
+  border-radius: 5px;
+  margin: 10px;
+  padding-left: 40px; 
+  padding-right: 40px;
+}
+
+.cards h1{
+  margin-top: 30px;
+  text-align:left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #3187AC;
+}
+
+.cards h2{
+  margin-top: 15px;
+  text-align:left;
+  font-size: 20px;
+  font-family: Open sans-serif;
+  color: 505050;
+}
+
+.cards button {
+  padding: 7px 20px;
+  position: absolute;
+  bottom: 35px;
+  font-size: 14px;
+  color:  #3187AC;
+  border-color:  #3187AC;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+.cards button:hover {
+  background-color: white; 
+  border-color:  #3187AC;
+}
+
+/* Navbar.css */
+.navbar {
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.logo {
+  margin-left: 0.5em;
+  font-size: 3em; 
+  margin-right: 1em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links > div {
+  display: flex;
+  text-align: center;
+  margin: 0 0.5vw; 
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.dark .nav-links a {
+  color: #505050;
+}
+
+.light .nav-links a  {
+  color: #FFFFFF;
+}
+
+/* Home */
+.bg-image {
+  background-image: url("img/Home.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh; 
+  align-items: center;
+}
+
+.boxContainer {
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px; 
+  right: 20px;  
+  top: 20px;   
+  width: 98%;
+  height: 30em;
+  padding-left: 110px; 
+  background-color: #E0EAEF;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+.footer {
+  color: black;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .container .footer-content {
+  margin: 0 auto;
+  border-top: 1.5px solid black; 
+  display: flex;
+}
+
+.footer .container .footer-content p {
+  text-align: center;
+  margin: 10px 5vw; 
+}
