@@ -42,15 +42,14 @@ export default function ImageUpload() {
     <div className="image-upload">
     <div className="container-fluid bg-image rounded p-4">
       <div className="row">
+      <NavBar/>
         <div className="col-md-6 p-5">
-          <h1>dewy</h1>
           <div id="camera-preview"></div>
         </div>
-        <div className="col-md-6 p-5">
-          <NavBar/>
-          <div className="d-flex align-items-center text-center mx-auto vh-100">
-            <div>
+        <div className="col-md-6 p-5 d-flex align-items-center">
+            <div >
               <h2>instant skin analysis</h2>
+              <h3>smart scan. targeted care.</h3>
               <div className="mt-4">
                 <button onClick={handleScanNow}>SCAN NOW</button>
                 <button onClick={handleUploadImage}>UPLOAD IMAGE</button>
@@ -62,9 +61,9 @@ export default function ImageUpload() {
                   ref={fileInputRef}
                 />
               </div>
+              <h3>photo tips and tricks</h3>
             </div>
           </div>
-        </div>
       </div>
       </div>
       </div>
