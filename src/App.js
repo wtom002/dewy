@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Scan from './components/Scan';
 import About from './components/About';
 import Ingredinary from './components/Ingredinary.js';
+import ResultsPage from './components/ResultsPage.js'
 
 //Fixed Components
 import  Footer  from './components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/ingredinary" element={<Ingredinary />} />
         <Route path="/scan" element={<Scan />} />
+        <Route path="/result" element={<ResultsPage />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
