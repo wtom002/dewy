@@ -3,10 +3,9 @@ import NavBar from './NavBar';
 
 export default function About() {
   return (
-    <div>
+    <div class="banner banner-s bg-about">
       <NavBar darkMode={false} />
-      <h2>About</h2>
-      <p>Welcome to the about page!</p>
-    </div>
+        <h1>About</h1>
+        </div>
   );
 }

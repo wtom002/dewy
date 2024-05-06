@@ -7,7 +7,7 @@ export default function NavBar({ darkMode }) {
         <div>
         <li className="logo"><a href="/">dewy</a></li>
         </div>
-        <div>
+        <div className="navnav">
         <li><a href="/scan">SCAN</a></li>
         <li><a href="/ingredinary">INGREDINARY</a></li>
         <li><a href="/about">ABOUT US</a></li>

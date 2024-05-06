@@ -39,7 +39,7 @@ export default function ImageUpload() {
 
   return (
     <div className="image-upload">
-    <div className="container-fluid bg-image">
+    <div className="banner banner-l bg-scan">
       <div className="row">
         
       <NavBar darkMode={true} />
