@@ -155,27 +155,7 @@ button:hover {
   background-position: center; 
   background-repeat: no-repeat;
 } 
-.dbanner h1 {
-  color: #505050;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  font-size: 40px; 
-  margin-left: 7vmax;
-  margin-right: 50vmax;
-  font-size: 3.5em; 
-}
 
-.dbanner h2 {
-  font-family: Open sans-serif;
-  font-weight: lighter;
-  font-size: 20px;  
-  color: #505050;
-  margin-left: 7vmax;
-  margin-right: 55vmax;
-  font-size: 1.3em; 
-  padding-bottom: 10px;
-}
 
 .dbanner button {
 font-family: Open sans-serif;
@@ -554,6 +534,30 @@ hr {
   padding: 0 120px;
   padding-bottom: 340px;
   font-size: 1.3em;
+}
+
+
+/* Ingredinary */
+
+.bg-ingredinary h1 {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-size: 40px; 
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+}
+
+.bg-ingredinary h2 {
+  font-family: Open sans-serif;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  font-weight: lighter;
+  color: #505050;
+  font-size: 1.3em; 
+  padding-bottom: 10px;
+  align-items: center;
 }
 
 /* Backgrounds */
