@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 
-export default function Home() {
+export default function Ingredinary() {
   return (
     <div class="banner banner-s bg-ingredinary">
       <NavBar darkMode={true} />

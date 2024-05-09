@@ -5,8 +5,8 @@ import NavBar from './NavBar';
 export default function ResultsPage() {
     return (
         <div>
-        <div class="boxContainer bg-image">
-        <NavBar/>
+        <div class="banner banner-s bg-result">
+        <NavBar darkMode={true} />
         <h1>take a look at your ingredient results.</h1>
         <h2>it looks like your main skin concern is: <b>ACNE</b> </h2>
         <h2>following an analysis of your skin, we recommend <b>four</b> essential ingredients...</h2>
@@ -53,8 +53,9 @@ export default function ResultsPage() {
             <h1>prod1<h2>blah</h2>  </h1>
             </div>
             <div class="recs">
+                <img src="/../img/home/green.png"></img>
             <h1>prod2<h2>blah</h2>  </h1>
-                      
+          
             </div>
             <div class="recs">
             <h1>prod3<h2>blah</h2></h1>
