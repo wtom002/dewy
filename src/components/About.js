@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 
 export default function About() {
   return (
-    <div class="banner banner-s bg-about">
+    <div className="banner banner-s bg-about">
       <NavBar darkMode={false} />
         <h1>About</h1>
         </div>
