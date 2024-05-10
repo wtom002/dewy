@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Search } from "./Search";
 import { SearchResultsList } from "./SearchResultsList.js";
 import ingredients from "./ingredients.json";
-import { FaRecordVinyl } from "react-icons/fa";
 
 export default function Ingredinary() {
   const [results, setResults] = useState([]);
