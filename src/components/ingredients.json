@@ -1,0 +1,170 @@
+[
+  {
+    "id": 0,
+    "ingredient": "Antibiotics",
+    "description": "Antibiotics are medications that fight bacterial infections.",
+    "benefits": ["Fight bacterial infections", "Reduce inflammation associated with acne"],
+    "function": ["Kill or inhibit the growth of bacteria on the skin"],
+    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"]
+  },
+  {
+    "id": 1,
+    "ingredient": "Azelaic Acid",
+    "description": "Azelaic acid is a naturally occurring acid found in grains like barley, wheat, and rye.",
+    "benefits": ["Treats acne", "Reduces hyperpigmentation", "Inhibits the growth of bacteria"],
+    "function": ["Exfoliates the skin", "Unclogs pores", "Reduces inflammation"],
+    "at_a_glance": ["Treats acne", "Reduces hyperpigmentation"]
+  },
+  {
+    "id": 2,
+    "ingredient": "Benzoyl Peroxide",
+    "description": "Benzoyl peroxide is a topical medication used to treat acne.",
+    "benefits": ["Kills acne-causing bacteria", "Reduces inflammation", "Unclogs pores"],
+    "function": ["Releases oxygen, which kills bacteria on the skin's surface"],
+    "at_a_glance": ["Treats acne", "Reduces inflammation"]
+  },
+  {
+    "id": 3,
+    "ingredient": "Ceramides",
+    "description": "Ceramides are lipid molecules that help form the skin's barrier and retain moisture.",
+    "benefits": ["Moisturizes the skin", "Strengthens the skin barrier", "Prevents moisture loss"],
+    "function": ["Repairs and maintains the skin's barrier function"],
+    "at_a_glance": ["Moisturizes", "Strengthens skin barrier"]
+  },
+  {
+    "id": 4,
+    "ingredient": "Corticosteroid Injections",
+    "description": "Corticosteroid injections are medications injected into the skin to reduce inflammation.",
+    "benefits": ["Rapidly reduce inflammation", "Alleviate itching and discomfort"],
+    "function": ["Suppress the immune response and reduce inflammation"],
+    "at_a_glance": ["Rapidly reduces inflammation"]
+  },
+  {
+    "id": 5,
+    "ingredient": "Glycerin",
+    "description": "Glycerin is a humectant that attracts moisture to the skin.",
+    "benefits": ["Hydrates the skin", "Improves skin barrier function", "Soothes dryness"],
+    "function": ["Draws water from the environment into the skin and helps maintain moisture balance"],
+    "at_a_glance": ["Hydrates", "Improves skin barrier"]
+  },
+  {
+    "id": 6,
+    "ingredient": "Glycolic Acid",
+    "description": "Glycolic acid is an alpha hydroxy acid (AHA) derived from sugar cane.",
+    "benefits": ["Exfoliates the skin", "Increases cell turnover", "Improves skin texture and tone"],
+    "function": ["Penetrates the skin to dissolve dead skin cells and unclog pores"],
+    "at_a_glance": ["Exfoliates", "Improves skin texture"]
+  },
+  {
+    "id": 7,
+    "ingredient": "Hyaluronic Acid",
+    "description": "Hyaluronic acid is a naturally occurring substance found in the skin that attracts and retains moisture.",
+    "benefits": ["Hydrates the skin", "Plumps and smooths fine lines and wrinkles", "Improves skin elasticity"],
+    "function": ["Attracts and holds water in the skin's dermis"],
+    "at_a_glance": ["Hydrates", "Plumps skin"]
+  },
+  {
+    "id": 8,
+    "ingredient": "Isotretinoin (Accutane)",
+    "description": "Isotretinoin is a medication used to treat severe acne.",
+    "benefits": ["Reduces oil production", "Shrinks sebaceous glands", "Prevents acne formation"],
+    "function": ["Targets the underlying causes of acne"],
+    "at_a_glance": ["Treats severe acne", "Reduces oil production"]
+  },
+  {
+    "id": 9,
+    "ingredient": "Lactic Acid",
+    "description": "Lactic acid is an alpha hydroxy acid (AHA) derived from milk.",
+    "benefits": ["Exfoliates the skin", "Brightens complexion", "Moisturizes the skin"],
+    "function": ["Promotes cell turnover and stimulates collagen production"],
+    "at_a_glance": ["Exfoliates", "Brightens skin"]
+  },
+  {
+    "id": 10,
+    "ingredient": "Niacinamide",
+    "description": "Niacinamide, also known as vitamin B3, is a water-soluble vitamin.",
+    "benefits": ["Reduces inflammation", "Regulates oil production", "Improves skin barrier function"],
+    "function": ["Boosts collagen production and repairs damaged skin"],
+    "at_a_glance": ["Reduces inflammation", "Regulates oil"]
+  },
+  {
+    "id": 11,
+    "ingredient": "Non-comedogenic Moisturizers",
+    "description": "Non-comedogenic moisturizers are formulated to not clog pores.",
+    "benefits": ["Hydrates the skin", "Prevents acne breakouts", "Soothes dryness"],
+    "function": ["Provides hydration without blocking pores"],
+    "at_a_glance": ["Hydrates", "Does not clog pores"]
+  },
+  {
+    "id": 12,
+    "ingredient": "Oral Antibiotics",
+    "description": "Oral antibiotics are medications taken by mouth to treat bacterial infections.",
+    "benefits": ["Fight bacterial infections", "Reduce inflammation associated with acne"],
+    "function": ["Kill or inhibit the growth of bacteria in the body"],
+    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"]
+  },
+  {
+    "id": 13,
+    "ingredient": "Retinoid",
+    "description": "Retinoids are derivatives of vitamin A.",
+    "benefits": ["Stimulates collagen production", "Increases cell turnover", "Unclogs pores"],
+    "function": ["Promotes skin renewal and prevents acne formation"],
+    "at_a_glance": ["Stimulates collagen", "Unclogs pores"]
+  },
+  {
+    "id": 14,
+    "ingredient": "Salicylic Acid",
+    "description": "Salicylic acid is a beta hydroxy acid (BHA) derived from willow bark.",
+    "benefits": ["Unclogs pores", "Reduces inflammation", "Exfoliates the skin"],
+    "function": ["Penetrates into pores to dissolve oil and dead skin cells"],
+    "at_a_glance": ["Unclogs pores", "Reduces inflammation"]
+  },
+  {
+    "id": 15,
+    "ingredient": "Sulfur",
+    "description": "Sulfur is a naturally occurring mineral with antibacterial properties.",
+    "benefits": ["Dries out excess oil", "Reduces acne-causing bacteria", "Exfoliates the skin"],
+    "function": ["Absorbs excess oil and unclogs pores"],
+    "at_a_glance": ["Dries out oil", "Exfoliates skin"]
+  },
+  {
+    "id": 16,
+    "ingredient": "Tea Tree oil",
+    "description": "Tea tree oil is an essential oil derived from the leaves of the tea tree plant.",
+    "benefits": ["Antimicrobial properties", "Reduces acne inflammation", "Soothes irritated skin"],
+    "function": ["Kills acne-causing bacteria and reduces redness"],
+    "at_a_glance": ["Antimicrobial", "Reduces inflammation"]
+  },
+  {
+    "id": 17,
+    "ingredient": "Topical Clindamycin",
+    "description": "Topical clindamycin is an antibiotic medication applied to the skin to treat acne.",
+    "benefits": ["Kills acne-causing bacteria", "Reduces inflammation", "Prevents acne breakouts"],
+    "function": ["Inhibits bacterial growth and reduces inflammation"],
+    "at_a_glance": ["Kills bacteria", "Reduces inflammation"]
+  },
+  {
+    "id": 18,
+    "ingredient": "Topical Retinoids",
+    "description": "Topical retinoids are vitamin A derivatives applied to the skin to treat acne.",
+    "benefits": ["Stimulates collagen production", "Increases cell turnover", "Unclogs pores"],
+    "function": ["Promotes skin renewal and prevents acne formation"],
+    "at_a_glance": ["Stimulates collagen", "Unclogs pores"]
+  },
+  {
+    "id": 19,
+    "ingredient": "Lightweight Sunscreens",
+    "description": "Lightweight sunscreens are sunscreen formulations that feel lightweight on the skin.",
+    "benefits": ["Protects against UV damage", "Prevents sunburn", "Reduces risk of skin cancer"],
+    "function": ["Blocks harmful UV rays from penetrating the skin"],
+    "at_a_glance": ["Protects from UV", "Lightweight formula"]
+  },
+  {
+    "id": 20,
+    "ingredient": "Zinc",
+    "description": "Zinc is a mineral that plays a vital role in skin health and function.",
+    "benefits": ["Reduces inflammation", "Regulates oil production", "Promotes wound healing"],
+    "function": ["Acts as an antioxidant and anti-inflammatory agent"],
+    "at_a_glance": ["Reduces inflammation", "Regulates oil"]
+  }
+]

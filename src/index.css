@@ -269,6 +269,20 @@ hr {
   background-color: white; 
   border-color:  #3187AC;
 }
+/* about */
+.bg-about h1 {
+  color: white;
+  margin-left: -15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 110px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px; 
+  display: flex;
+  align-content: center;
+  justify-content: center; /* Horizontally center the content */
+}
+
 
 /* results */
 .ingre-container  {
@@ -561,6 +575,101 @@ hr {
   align-items: center;
 }
 
+.ingredlist {
+  margin-top: 50px;
+  margin-left: 90px;
+}
+
+.line {
+  border-top: 2px solid #505050; /* Adjust the thickness and color of the line */
+  width: 95%; /* Set the width to span the full width of its container */
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.ingredlist h1 {
+  font-size: 2.8em;
+}
+
+.ingred .line{
+    border-top: 1px solid #505050;
+}
+.ingred {
+  margin-bottom: 20px;
+}
+
+.ingred h1 {
+  font-size: 2.2em;
+}
+
+.ingred h2 {
+  margin: 20px 0;
+  display: flex;
+  font-weight: lighter;
+  color: #505050;
+  font-size: 1.3em; 
+  padding-bottom: 10px;
+}
+
+.ingred button {
+  font-size: 14px;
+  color:  #3187AC;
+  border-color:  #3187AC;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+.ingred button:hover {
+  background-color: white; 
+  border-color:  #3187AC;
+}
+
+.popup {
+  width: 1000px;
+  background-color: #E0EAEF;
+  padding: 0 50px 30px;
+  position: fixed;
+  border-radius: 20px;
+  visibility: visible;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.popup button {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #505050;
+  border-radius: 30px;
+  border-color: #E0EAEF;
+  margin-top: 40px;
+  margin-left: 850px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+.popup button:hover {
+  background-color: #E0EAEF; 
+  border-color:  #505050;
+}
+
+.popup h1 {
+  margin-top: -60px;
+}
+.popup h2 {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.popup li{
+margin-left: 30px;
+padding-left: 10px;
+ font-weight: lighter;
+ font-size: 1.2em;
+}
 /* Backgrounds */
 .bg {
   align-items: center;
@@ -582,7 +691,54 @@ hr {
 .bg-result {
   background-image: url("img/Results.png");
 }
+/* Search */
+.input-wrapper {
+  margin-top: 30px;
+  margin-left: 90px;
+  width: 60%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
 
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.results-list {
+  margin-left: 90px;
+  width: 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-result {
+  padding: 10px 20px;
+}
+
+.search-result:hover {
+  background-color: #efefef;
+}
 /* Footer */
 footer {
   color: black;

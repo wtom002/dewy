@@ -1,24 +1,23 @@
 import React from 'react';
-import NavBar from './NavBar';
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import ingredients from "./ingredients.json";
 
 export const Search = ({ setResults }) => {
     const [input, setInput] = useState("");
   
     const fetchData = (value) => {
-      fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => response.json())
-        .then((json) => {
-          const results = json.filter((user) => {
+      // Use the imported JSON data instead of a URL
+      const results = ingredients.filter((user) => {
             return (
               value &&
               user &&
-              user.name &&
-              user.name.toLowerCase().includes(value)
+              user.ingredient &&
+              user.ingredient.toLowerCase().includes(value)
             );
           });
           setResults(results);
-        });
-    };
+        };
   
     const handleChange = (value) => {
       setInput(value);
@@ -27,7 +26,7 @@ export const Search = ({ setResults }) => {
   
     return (
       <div className="input-wrapper">
-        <FaSearch id="search-icon" />
+        <FaSearch/>
         <input
           placeholder="Type to search..."
           value={input}
