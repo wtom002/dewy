@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
+import { Image } from "react";
 
 export default function Home() {
   return (
@@ -20,20 +21,19 @@ export default function Home() {
         <h1>how does it work</h1>
         <div className="box-container">
           <div className="box">
-            <img src="../img/home/pink.png" alt="pink"></img>
+          <div className="homePic1"/>
             <h2>Upload a clear selfie of your face</h2>
           </div>
-
           <div className="box">
-            <img src="../img/home/purple.png" alt="purple"></img>
+            <div className="homePic2"/>
             <h2>Answer skin survey</h2>
           </div>
           <div className="box">
-            <img src="../img/home/green.png" alt="green"></img>
+            <div className="homePic3"/>
             <h2>Computer vision analyzes</h2>
           </div>
           <div className="box">
-            <img src="../img/Home.png" alt="splash art"></img>
+            <div className="homePic4" ></div>
             <h2>Get results with ingredients & products just for you</h2>
           </div>
         </div>

@@ -13,8 +13,8 @@ import ResultsPage from './components/ResultsPage'
 import  Footer  from './components/Footer';
 
 export default function App() {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(
+  const root = document.getElementById('root');
+  ReactDOM.createRoot(root).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Home/>} />
