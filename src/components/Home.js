@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { Image } from "react";
+import Onboard from "./Onboard";
 ;
 export default function Home() {
   return (
