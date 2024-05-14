@@ -1,19 +1,19 @@
 [
     {
       "condition": "White Heads",
-      "treatments": ["Sulfur", "Salycic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
+      "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
     },
     {
       "condition": "Black Heads",
-      "treatments": ["Sulfur", "Salycic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
+      "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
     },
     {
       "condition": "Papule",
-      "treatments": ["Sulfur", "Salycic Acid", "Glycolic Acid", "Azelaic Acid", "Benzoyl Peroxide"]
+      "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Azelaic Acid", "Benzoyl Peroxide"]
     },
     {
       "condition": "Pustule",
-      "treatments": ["Sulfur", "Salycic Acid", "Azelaic Acid", "Benzoyl Peroxide", "Tea Tree oil"]
+      "treatments": ["Sulfur", "Salicylic Acid", "Azelaic Acid", "Benzoyl Peroxide", "Tea Tree oil"]
     },
     {
       "condition": "Cystic Acne",

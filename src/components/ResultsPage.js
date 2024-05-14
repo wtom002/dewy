@@ -1,22 +1,53 @@
-import React from 'react';
 import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import conditions from './conditions.json';
+import ingredientsList from './ingredients.json';
 
 export default function ResultsPage() {
+    const [selectedCondition, setSelectedCondition] = useState('');
+    const [ingredients, setIngredients] = useState([]);
+  
+    const handleConditionChange = (e) => {
+      const condition = e.target.value;
+      setSelectedCondition(condition);
+      const selectedConditionData = conditions.find(item => item.condition === condition);
+
+      if (selectedConditionData) {
+        setIngredients(ingredientsList.filter(ingredient => selectedConditionData.treatments.includes(ingredient.ingredient)));
+      } else {
+        setIngredients([]);
+      }
+      console.log(ingredients);
+    };
+
     return (
         <div>
-        <div className="banner banner-s bg-result">
+        <div className="dbanner banner-s bg-result">
         <NavBar darkMode={true} />
-        <h1>take a look at your ingredient results.</h1>
-        <h2>it looks like your main skin concern is: <b>ACNE</b> </h2>
-        <h2>following an analysis of your skin, we recommend <b>four</b> essential ingredients...</h2>
+        <h1>take a look at your scan results.</h1>
+        <h2>it looks like your main skin concern is:  <select onChange={handleConditionChange} value={selectedCondition}>
+        <option value="">Select a condition</option>
+        {conditions.map(item => (
+          <option key={item.condition} value={item.condition}>{item.condition}</option>
+        ))}
+      </select> </h2>
+        <h2>following an analysis of your skin, we recommend {ingredients.length} essential ingredients...</h2>
         <Link to="/scan">
         <button>REDO ANALYSIS</button>
         </Link>
         </div>
         <h1 className="results-heading">ingredients</h1>
         <hr></hr>
-        <div className="cards-container">
+        <div className="treatments"> 
+          {ingredients && ingredients.map((ingredient, index) => (
+        <div key={index}>
+          <h1>{ingredient.ingredient}</h1>
+          <h2>{ingredient.description}</h2>
+        </div>
+          ))}
+      </div>
+        {/* <div className="cards-container">
             <div className="cards">
             <h1>niacinamide</h1>
             <h2>Niacinamide reduces inflammation and acne by regulating oil production, minimizing pores, and preventing bacterial growth. It strengthens the skin's barrier against environmental stressors, fades acne scars, and evens out skin tone by promoting cell renewal.</h2>
@@ -37,7 +68,7 @@ export default function ResultsPage() {
             <h2>Benzoyl peroxide targets acne bacteria, reducing inflammation and preventing new breakouts by introducing oxygen into pores. It exfoliates the skin, clearing away dead cells for a clearer, healthier complexion.</h2>
             <button>READ MORE -{'>'} </button>
             </div>
-        </div>
+        </div> */}
 
         <div className="rec-container">
             <h1>We Recommend these products <p>from amazon.com</p></h1>

@@ -10,7 +10,7 @@ export default function Home() {
       <NavBar darkMode={false} />
       <h1>welcome to dewy.</h1>
       <h2>our advanced system utilizes computer vision and personalized surveys to tailor recommendations specifically for your skin concerns</h2>
-      <button><a href="/ResultsPage">START ANALYSIS </a></button>
+      <button><a href="/result">START ANALYSIS </a></button>
     </div>
     <Onboard/>
   </>

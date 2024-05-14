@@ -285,6 +285,28 @@ hr {
 
 
 /* results */
+.bg-result h1 {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 50px; 
+  display: flex;
+  margin-left: 100px;
+  margin-right: 50vmax;
+}
+
+.bg-result h2 {
+  font-family: Open sans-serif;
+  display: flex;
+  font-weight: lighter;
+  color: #505050;
+  font-size: 1.3em; 
+  padding-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 50vmax;
+}
+
 .ingre-container  {
   margin-top: 20px;
   padding: 10px;
@@ -411,6 +433,28 @@ hr {
   font-size: 15px;
   color: #505050;
   font-weight: lighter;
+}
+
+
+.treatments {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 108px;
+  
+}
+
+.treatments h1 {
+  font-size: 2em;
+  font-family: Open sans-serif;
+}
+
+.treatments h2 {
+  margin: 20px 0;
+  display: flex;
+  font-weight: lighter;
+  color: #505050;
+  font-size: 1.3em; 
+  padding-bottom: 10px;
 }
 
 /* Navbar.css */
@@ -616,6 +660,7 @@ hr {
 
 .ingredlist h1 {
   font-size: 2.8em;
+  
 }
 
 .ingred .line{
@@ -766,6 +811,9 @@ input:focus {
 .search-result:hover {
   background-color: #efefef;
 }
+
+/* Scan  */
+
 /* Footer */
 footer {
   color: black;
