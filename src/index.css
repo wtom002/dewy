@@ -133,44 +133,6 @@ button:hover {
   font-size: 3em; 
 }
 
-.banner h1 {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  font-size: 40px; 
-  margin-left: 7vmax;
-  font-size: 3.5em; 
-}
-
-.banner h2 {
-  padding-right:55vmax; 
-  font-size: 20px;  
-  color: white;
-  margin-left: 7vmax;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-}
-
-.banner button {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 60px;
-  margin-left: 7vmax;
-  padding: 7px 20px;
-  font-size: 1.3em;
-  color: white;
-  border-color:  white;
-  border-radius: 25px;
-  border-width: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
-}
-
-.banner button:hover {
-  background-color:  #505050;
-  border-color: white; 
-}
-
 /* dark banner */
 .dbanner {
   padding: 10px;
@@ -540,6 +502,53 @@ hr {
 
 /* Home */
 
+
+.bg-home h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-size: 40px; 
+  margin-left: 7vmax;
+  font-size: 3.5em; 
+}
+
+.bg-home h2 {
+  padding-right:55vmax; 
+  font-size: 20px;  
+  color: white;
+  margin-left: 7vmax;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.bg-home button {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+  margin-left: 7vmax;
+  padding: 7px 20px;
+  font-size: 1.3em;
+  color: white;
+  border-color:  white;
+  border-radius: 25px;
+  border-width: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+.bg-home a{
+  color: white;
+  text-decoration: none;
+}
+.bg-home button:hover {
+  background-color:white;
+  color:#505050;
+  border-color: #505050;
+}
+
+a:visited {
+  color: inherit; /* Or specify the color you want */
+}
+
 .home1  {
   margin-top: 40px;
   padding: 10px;
@@ -586,7 +595,6 @@ hr {
   width: 99%;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
-
 }
 .homePic3 {
   background-image: url("components/images/green.jpg");
@@ -749,10 +757,11 @@ hr {
 .popup {
   width: 1000px;
   background-color: #E0EAEF;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+  border-width: 100px;
   padding: 0 50px 30px;
   position: fixed;
   border-radius: 20px;
-  visibility: visible;
   top: 50%;
   left:50%;
   transform: translate(-50%,-50%) scale(1);

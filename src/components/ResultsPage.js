@@ -121,16 +121,13 @@ export default function ResultsPage() {
             </div>
             <div className="amazon">
             <div className="recs">
-            <h1>prod1<h2>blah</h2> </h1>
+            <h1>product 1<h2>blah</h2> </h1>
             </div>
             <div className="recs">
-                <img src="/../img/home/green.png"></img>
-            <h1>prod2<h2>blah</h2>  </h1>
-          
+            <h1>product 2<h2>blah</h2>  </h1>
             </div>
             <div className="recs">
-            <h1>prod3<h2>blah</h2></h1>
-            
+            <h1>product 3<h2>blah</h2></h1>
             </div>
             </div>
         </div>
