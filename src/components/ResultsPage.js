@@ -7,7 +7,14 @@ import ingredientsList from './ingredients.json';
 export default function ResultsPage() {
     const [selectedCondition, setSelectedCondition] = useState('');
     const [ingredients, setIngredients] = useState([]);
-  
+    const [openPopupIndex, setOpenPopupIndex] = useState(null);
+
+    const openPopup = (index) => {
+        setOpenPopupIndex(index);
+    };
+    const closePopup = () => {
+        setOpenPopupIndex(null);
+    };
     const handleConditionChange = (e) => {
       const condition = e.target.value;
       setSelectedCondition(condition);
@@ -40,12 +47,43 @@ export default function ResultsPage() {
         <h1 className="results-heading">ingredients</h1>
         <hr></hr>
         <div className="treatments"> 
-          {ingredients && ingredients.map((ingredient, index) => (
+          {ingredients && ingredients.map((ingredient, index) => {
+            return (
         <div key={index}>
           <h1>{ingredient.ingredient}</h1>
           <h2>{ingredient.description}</h2>
+          <button onClick={() => openPopup(index)}>
+                  READ MORE -{">"}
+                </button>
+        {openPopupIndex === index && (
+            <div className="popup">
+              <button onClick={closePopup}>X</button>
+              <h1>{ingredient.ingredient}</h1>
+
+              <h2>BENEFITS</h2>
+              <ul>
+                {ingredient.benefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+              <h2>FUNCTIONS</h2>
+              <ul>
+                {ingredient.function.map((func, index) => (
+                  <li key={index}>{func}</li>
+                ))}
+              </ul>
+              <h2>AT A GLANCE</h2>
+              <ul>
+                {ingredient.at_a_glance.map((glance, index) => (
+                  <li key={index}>{glance}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
         </div>
-          ))}
+        );
+            })}
       </div>
         {/* <div className="cards-container">
             <div className="cards">
