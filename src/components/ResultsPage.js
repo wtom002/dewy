@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-
+import { Link } from 'react-router-dom';
 
 export default function ResultsPage() {
     return (
@@ -10,7 +10,9 @@ export default function ResultsPage() {
         <h1>take a look at your ingredient results.</h1>
         <h2>it looks like your main skin concern is: <b>ACNE</b> </h2>
         <h2>following an analysis of your skin, we recommend <b>four</b> essential ingredients...</h2>
+        <Link to="/scan">
         <button>REDO ANALYSIS</button>
+        </Link>
         </div>
         <h1 className="results-heading">ingredients</h1>
         <hr></hr>

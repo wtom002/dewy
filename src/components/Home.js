@@ -1,6 +1,8 @@
-import React from 'react';
-import NavBar from './NavBar';
-import Onboard from './Onboard';
+import React from "react";
+import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
+import { Image } from "react";
+;
 export default function Home() {
   return (
     <><div className="banner banner-l bg-home">

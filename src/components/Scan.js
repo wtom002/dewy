@@ -113,39 +113,42 @@ export default function ImageUpload() {
   };
 
   const detect = async (net) => {
-  if (
-    typeof webcamRef.current !== "undefined" &&
-    webcamRef.current !== null &&
-    webcamRef.current.video.readyState === 4
-  ) {
-    // Get Video Properties
-    const video = webcamRef.current.video;
-    const videoWidth = webcamRef.current.video.videoWidth;
-    const videoHeight = webcamRef.current.video.videoHeight;
-
-    // Set video width
-    webcamRef.current.video.width = videoWidth;
-    webcamRef.current.video.height = videoHeight;
-
-    // Set canvas width
-    canvasRef.current.width = videoWidth;
-    canvasRef.current.height = videoHeight;
-
-    // Wait for video to load metadata
-    await video.play();
-
-    // Make Detections
-    const face = await net.estimateFaces(video);
-    //console.log(face);
-
-    // Get canvas context
-    const ctx = canvasRef.current.getContext("2d");
-    requestAnimationFrame(()=>{drawMesh(face, ctx)});
-  } else {
-    // Retry detection after a short delay if video is not ready
-    setTimeout(() => detect(net), 200);
-  }
-};
+    if (
+      typeof webcamRef.current !== "undefined" &&
+      webcamRef.current !== null &&
+      webcamRef.current.video.readyState === 4 &&
+      canvasRef.current !== null // Add this check
+    ) {
+      // Get Video Properties
+      const video = webcamRef.current.video;
+      const videoWidth = video.videoWidth;
+      const videoHeight = video.videoHeight;
+  
+      // Set video width
+      video.width = videoWidth;
+      video.height = videoHeight;
+  
+      // Set canvas width
+      canvasRef.current.width = videoWidth;
+      canvasRef.current.height = videoHeight;
+  
+      // Wait for video to load metadata
+      await video.play();
+  
+      // Make Detections
+      const face = await net.estimateFaces(video);
+  
+      // Get canvas context
+      const ctx = canvasRef.current.getContext("2d");
+      requestAnimationFrame(() => {
+        drawMesh(face, ctx);
+      });
+    } else {
+      // Retry detection after a short delay if video is not ready
+      setTimeout(() => detect(net), 200);
+    }
+  };
+  
 
 
   useEffect(()=>{runFacemesh()}, []);
