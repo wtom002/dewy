@@ -5,20 +5,20 @@ export default function Onboard() {
             <h1>how does it work</h1>
             <div className="box-container">
                 <div className="box">
-                    <img src="../img/home/pink.png" alt="pink"></img>
+                <div className="homePic1"/>
                     <h2>Upload a clear selfie of your face</h2>
                 </div>
 
                 <div className="box">
-                    <img src="../img/home/purple.png" alt="purple"></img>
+                <div className="homePic2"/>
                     <h2>Answer skin survey</h2>
                 </div>
                 <div className="box">
-                    <img src="../img/home/green.png" alt="green"></img>
+                <div className="homePic3"/>
                     <h2>Computer vision analyzes</h2>
                 </div>
                 <div className="box">
-                    <img src="../img/Home.png" alt="splash art"></img>
+                <div className="homePic4"/>
                     <h2>Get results with ingredients & products just for you</h2>
                 </div>
             </div>
@@ -28,11 +28,9 @@ export default function Onboard() {
                     <p>(n.) a multidisciplinary field that enables computers to interpret and make sense of visual information from the world.</p>
                     <h2>The primary goal is to enable computers to extract meaningful insights, recognize patterns, and interpret visual data.</h2>
                 </div>
-                <div className="grid-item">
-                    <img src="image2.jpg" alt="pic 2"></img>
+                <div className="grid-item-pic2">
                 </div>
-                <div className="grid-item">
-                    <img src="image3.jpg" alt="pic 3"></img>
+                <div className="grid-item-pic3">
                 </div>
                 <div className="grid-item">
                     <h1>ingredient focus</h1>

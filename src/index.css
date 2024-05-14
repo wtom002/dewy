@@ -17,21 +17,45 @@ body {
   margin: 60px; 
 }
 
-.bg-image {
-  background-image: url("img/Scan.png");
-  background-size: cover;
-  background-position: center;
-  height: 90vh; 
-  align-items: center;
+.bg-scan h1 {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 50px; 
+  display: flex;
+  margin-left: 50vmax;
 }
 
-.col-md-6:first-child {
-  margin-left: 100px;
+.bg-scan h2 {
+  font-family: Open sans-serif;
+  display: flex;
+  font-weight: lighter;
+  color: #505050;
+  font-size: 1.3em; 
+  padding-bottom: 10px;
+  margin-left: 50vmax;
 }
 
-.col-md-6:last-child {
-  margin-right: 100px;
-}
+
+.bg-scan button {
+  font-family: Open sans-serif;
+    margin-top: 50px;
+    margin-left: 50vmax;
+    padding: 7px 20px;
+    font-size: 1.3em;
+    color: #505050;
+    border-color:  #505050;
+    border-radius: 25px;
+    border-width: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+  }
+  
+  .bg-scan button:hover {
+    background-color:  white;
+    border-color: #505050; 
+  }
 
 h1,
 h2,
@@ -155,26 +179,6 @@ button:hover {
   background-position: center; 
   background-repeat: no-repeat;
 } 
-
-
-.dbanner button {
-font-family: Open sans-serif;
-  margin-top: 50px;
-  margin-left: 7vmax;
-  padding: 7px 20px;
-  font-size: 1.3em;
-  color: #505050;
-  border-color:  #505050;
-  border-radius: 25px;
-  border-width: 3px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
-}
-
-.dbanner button:hover {
-  background-color:  white;
-  border-color: #505050; 
-}
 
 hr {
   border: 1px solid 505050; /* Set the color and style of the line */
@@ -306,8 +310,25 @@ hr {
   margin-left: 100px;
   margin-right: 50vmax;
 }
-
-.ingre-container  {
+.bg-result button {
+  font-family: Open sans-serif;
+    margin-top: 50px;
+    margin-left: 7vmax;
+    padding: 7px 20px;
+    font-size: 1.3em;
+    color: #505050;
+    border-color:  #505050;
+    border-radius: 25px;
+    border-width: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+  }
+  
+  .bg-result button:hover {
+    background-color:  white;
+    border-color: #505050; 
+  }
+  .ingre-container  {
   margin-top: 20px;
   padding: 10px;
   position: relative;
@@ -525,20 +546,16 @@ hr {
 
 .box-container {
   flex-direction: row;
-  gap: 1 rem;
+  gap: 10px;
   justify-content: center;
   position: relative;
   margin-top: 50px;
   margin-bottom: 100px;
-  margin-left: 7vmax;
+  margin-left: 5vmax;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Adjust column width as needed */
 }
 
-/* .box {
-  width: 240px;
-  height: 330px; 
-} */
 
 .homePic1 {
   background-image: url("components/images/pink.jpg");
@@ -552,20 +569,23 @@ hr {
   height: 99%;
   width: 99%;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+
 }
 .homePic3 {
   background-image: url("components/images/green.jpg");
   height: 99%;
   width: 99%;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
 }
 .homePic4 {
   background-image: url("components/images/yellow.jpg");
   height: 99%;
   width: 99%;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
 }
-
 .box {
   width: 240px;
   height: 240px; 
@@ -609,19 +629,31 @@ hr {
 }
 
 .grid-item h2 {
-  margin: 50px 0;
-  padding: 0 60px;
   font-size: 1.3em;
+  padding-top: 280px;
 }
 
 .grid-item p {
   margin: 50px 0;
   padding: 0 120px;
-  padding-bottom: 340px;
   font-size: 1.3em;
 }
 
+.grid-item-pic2 {
+  padding: 20px;
+  text-align: center;
+  background-image: url("components/images/computervision.jpg");
+  border-radius: 25px;
+  background-size: cover;
+}
 
+.grid-item-pic3 {
+  padding: 20px;
+  text-align: center;
+  background-image: url("components/images/ingredient.jpg");
+  border-radius: 25px;
+  background-size: cover;
+}
 /* Ingredinary */
 
 .bg-ingredinary h1 {
@@ -633,6 +665,7 @@ hr {
   display: flex;
   justify-content: center; /* Horizontally center the content */
   align-items: center;
+  background-size: cover;
 }
 
 .bg-ingredinary h2 {
@@ -754,6 +787,7 @@ padding-left: 10px;
 .bg-scan {
   background-image: url("img/Scan.png");
 }
+
 .bg-about {
   background-image: url("img/About.png");
 }

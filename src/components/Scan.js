@@ -156,16 +156,14 @@ export default function ImageUpload() {
   return (
     
     <><div className="image-upload">
-      <div className="container-fluid bg-image">
-        <div className="row">
+      <div className="dbanner bg-scan banner-l">
+        <div className="">
           <NavBar darkMode={true} />
-          <div className="col-md-6 p-5">
             <div id="camera-preview"></div>
-          </div>
-          <div className="col-md-6 p-5 d-flex align-items-center">
+          <div className="">
             <div>
-              <h2>instant skin analysis</h2>
-              <h3>smart scan. targeted care.</h3>
+              <h1>instant skin analysis</h1>
+              <h2>smart scan. targeted care.</h2>
               <div className="mt-4">
                 <Link to="../result" /*temp fix for demo*/>
                   <button /*onClick={useSubmitScan}*/>SCAN NOW</button>
@@ -205,11 +203,12 @@ export default function ImageUpload() {
                   onChange={handleFileChange}
                   ref={fileInputRef} />
               </div>
-              <h3>photo tips and tricks</h3>
+              <h2>photo tips and tricks</h2>
             </div>
           </div>
         </div>
       </div>
-    </div><Onboard /></>
+    </div>
+    <Onboard /></>
   );
 }
