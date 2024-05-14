@@ -72,7 +72,7 @@ import * as tf from "@tensorflow/tfjs"
 import * as facemesh from "@tensorflow-models/face-landmarks-detection";
 import { drawMesh } from "../utilities";
 import Webcam from "react-webcam";
-
+import Onboard from './Onboard';
 //temp fix for demo
 
 export default function ImageUpload() {
@@ -152,20 +152,20 @@ export default function ImageUpload() {
 
   return (
     
-    <div className="image-upload">
-    <div className="container-fluid bg-image">
-      <div className="row">
-      <NavBar darkMode={true}/>
-        <div className="col-md-6 p-5">
-          <div id="camera-preview"></div>
-        </div>
-        <div className="col-md-6 p-5 d-flex align-items-center">
-            <div >
+    <><div className="image-upload">
+      <div className="container-fluid bg-image">
+        <div className="row">
+          <NavBar darkMode={true} />
+          <div className="col-md-6 p-5">
+            <div id="camera-preview"></div>
+          </div>
+          <div className="col-md-6 p-5 d-flex align-items-center">
+            <div>
               <h2>instant skin analysis</h2>
               <h3>smart scan. targeted care.</h3>
               <div className="mt-4">
                 <Link to="../result" /*temp fix for demo*/>
-                <button /*onClick={useSubmitScan}*/>SCAN NOW</button>
+                  <button /*onClick={useSubmitScan}*/>SCAN NOW</button>
                 </Link>
                 <Webcam
                   ref={webcamRef}
@@ -179,8 +179,7 @@ export default function ImageUpload() {
                     zindex: 9,
                     width: 640,
                     height: 480,
-                  }}
-                />
+                  }} />
 
                 <canvas
                   ref={canvasRef}
@@ -194,22 +193,20 @@ export default function ImageUpload() {
                     zindex: 9,
                     width: 640,
                     height: 480,
-                  }}
-                />
+                  }} />
                 <button onClick={handleUploadImage}>UPLOAD IMAGE</button>
                 <input
                   type="file"
                   accept="image/*"
                   style={{ display: 'none' }}
                   onChange={handleFileChange}
-                  ref={fileInputRef}
-                />
+                  ref={fileInputRef} />
               </div>
               <h3>photo tips and tricks</h3>
             </div>
           </div>
+        </div>
       </div>
-      </div>
-      </div>
+    </div><Onboard /></>
   );
 }
