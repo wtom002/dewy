@@ -28,9 +28,7 @@ body {
 }
 
 .bg-scan h2 {
-  font-family: Open sans-serif;
   display: flex;
-  font-weight: lighter;
   color: #505050;
   font-size: 1.3em; 
   padding-bottom: 10px;
@@ -40,9 +38,6 @@ body {
 
 .bg-scan button {
   font-family: Open sans-serif;
-    margin-top: 50px;
-    margin-left: 50vmax;
-    padding: 7px 20px;
     font-size: 1.3em;
     color: #505050;
     border-color:  #505050;
@@ -52,10 +47,18 @@ body {
     transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
   }
   
-  .bg-scan button:hover {
+.bg-scan button:hover {
     background-color:  white;
     border-color: #505050; 
   }
+
+.scan-buttons {
+  margin:10px 15vmax 20px 50vmax;
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fit,minmax(10px,auto));
+}
 
 h1,
 h2,
@@ -553,7 +556,7 @@ hr {
   margin-bottom: 100px;
   margin-left: 5vmax;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Adjust column width as needed */
+  grid-template-columns: repeat(auto-fill, minmax(20vmax, 1fr)); /* Adjust column width as needed */
 }
 
 

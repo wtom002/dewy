@@ -164,7 +164,7 @@ export default function ImageUpload() {
             <div>
               <h1>instant skin analysis</h1>
               <h2>smart scan. targeted care.</h2>
-              <div className="mt-4">
+              <div className="scan-buttons">
                 <Link to="../result" /*temp fix for demo*/>
                   <button /*onClick={useSubmitScan}*/>SCAN NOW</button>
                 </Link>
