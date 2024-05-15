@@ -11,15 +11,15 @@ export default function Onboard() {
 
                 <div className="box">
                 <div className="homePic2"/>
-                    <h2>Answer skin survey</h2>
-                </div>
-                <div className="box">
-                <div className="homePic3"/>
                     <h2>Computer vision analyzes</h2>
                 </div>
                 <div className="box">
-                <div className="homePic4"/>
+                <div className="homePic3"/>
                     <h2>Get results with ingredients & products just for you</h2>
+                </div>
+                <div className="box">
+                <div className="homePic4"/>
+                    <h2>Research products with ingredient dictionary</h2>
                 </div>
             </div>
         </div><div className="grid-container">
