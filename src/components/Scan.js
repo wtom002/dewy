@@ -3,15 +3,15 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 import NavBar from './NavBar';
-import * as tf from "@tensorflow/tfjs";
+/*import * as tf from "@tensorflow/tfjs";
 import * as facemesh from "@tensorflow-models/face-landmarks-detection";
 import { drawMesh } from "../utilities";
-import Webcam from "react-webcam";
+import Webcam from "react-webcam";*/
 import Onboard from './Onboard';
 
 export default function ImageUpload() {
-  const webcamRef = useRef(null);
-  const canvasRef = useRef(null);
+ /* const webcamRef = useRef(null);
+  const canvasRef = useRef(null);*/
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
@@ -44,10 +44,6 @@ export default function ImageUpload() {
           'Content-Type': 'multipart/form-data'
         }
       });
-      // history.push({
-      //   pathname: '/result',
-      //   state: { result: response.data }
-      // });
       navigate('../result', { state: { result: response.data } });
     } catch (error) {
       console.error('Error uploading the file', error);
@@ -55,7 +51,7 @@ export default function ImageUpload() {
     }
   };
 
-  const runFacemesh = async () => {
+  /*const runFacemesh = async () => {
     const model = facemesh.SupportedModels.MediaPipeFaceMesh;
     const detectorConfig = {
       runtime: "tfjs",
@@ -97,7 +93,7 @@ export default function ImageUpload() {
     }
   };
 
-  useEffect(() => { runFacemesh(); }, []);
+  useEffect(() => { runFacemesh(); }, []);*/
 
   return (
     <>
