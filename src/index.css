@@ -56,7 +56,6 @@ body {
   margin:10px 15vmax 20px 50vmax;
   display: grid;
   gap: 10px;
-
   grid-template-columns: repeat(auto-fit,minmax(10px,auto));
 }
 
@@ -68,14 +67,14 @@ li {
 }
 
 li {
-  font-size: 1.5em;
+  font-size: 1.em;
   font-weight: bold;
   padding-right: 120px;
 }
 
 h1 {
-  font-size: 4em; 
-  font-weight: bold;
+  display: flex;
+  font-size: 45px; 
 }
 
 h2 {
@@ -83,20 +82,6 @@ h2 {
   font-weight: bold;
 }
 
-button {
-  background-color: transparent;
-  color: #505050;
-  border: 2px solid #505050;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 50px; 
-}
-
-button:hover {
-  background-color: #505050;
-  color: white;
-}
 /* Results */
 
 * {
@@ -286,6 +271,7 @@ hr {
 
 .container-2 {
   margin-top: 20px;
+  margin-bottom: 50px;
   padding: 30px;
   position: relative;
   width: 100%;
@@ -305,23 +291,51 @@ hr {
 
 .inspo-grid {
   width: 100%;
+  margin-top: 10px;
   height: auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-  grid-gap: 1px; /* Gap between grid items */
+margin-left: 50px;
 }
-.inspo {
-  position: relative;
-  text-align: center;
-  
+.inspo-mis {
+  background-image: url('components/images/misinfo.png');
+  height: 200px;
+  width: 200px;
+  margin-top: 30px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.inspo-trend {
+  background-image: url('components/images/trend.png');
+  height: 200px;
+  width: 200px;
+  margin-top: 30px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.inspo-harm {
+  background-image: url('components/images/harmful.png');
+  height: 200px;
+  width: 200px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.inspo-overload {
+  background-image: url('components/images/overload.png');
+  height: 200px;
+  width: 200px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
 }
 
-.inspo p {
-  bottom: 0;
+.inspo-grid p {
+  margin-top: 200px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7); /* Optionally, add a semi-transparent background for better readability */
   padding: 10px;
+  text-align: center;
 }
 .container-2 h2 {
   display: flex;
@@ -329,8 +343,208 @@ hr {
   font-size: 33px;
   align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
+.container-3 h1{
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.coreval {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.vals {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #E0EAEF;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.vals h1 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 35px;
+  justify-content: center;
+}
+
+.vals p {
+  margin:60px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.container-4 {
+  margin-right: 20vmax;
+}
+
+.teamgrid {
+  margin-right: 20vmax;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+  margin-bottom: 70px;
+  margin-right: 40vmax;
+}
+
+.team-steph {
+  background-image: url('components/images/steph.jpg');
+  height: 400px;
+  width: 285px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.team-tiff {
+  background-image: url('components/images/tiff.jpg');
+  height: 400px;
+  width: 285px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.team-oscar
+ {
+  background-image: url('components/images/oscar.jpg');
+  height: 400px;
+  width: 285px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.team-will {
+  background-image: url('components/images/will.jpg');
+  height: 400px;
+  width: 285px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+.team-eric {
+  background-image: url('components/images/eric.jpg');
+  height: 400px;
+  width: 285px;
+  margin-top: 60px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px;
+}
+
+.gratitude {
+  margin-top: -40px;
+  font-weight: 200;
+  font-size: 1.3em;
+  margin-bottom: 60px;
+}
+
+.container-5 {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ensure it takes up the desired width */
+}
+
+.container-5 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ensures the slides container takes full width */
+}
+
+.slide {
+  min-width: 100%; /* Ensures each slide takes up full width of the container */
+  margin-top: 60px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #E0EAEF;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 70px;
+}
+
+.vol {
+  padding: 30px;
+  margin-right: 50px;
+  margin-left: 25px;
+}
+
+.vol h1 {
+  margin-bottom: 10px;
+}
+
+.vol h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.vol h3 {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.vol .first {
+  margin-top: 180px;
+}
+
+.vol p {
+  margin-bottom: 30px;
+}
+
+.vol-img-1 {
+  background-image: url('components/images/vol1.png');
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background-size: cover;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+}
+
+button {
+  background-color: transparent;
+  color: #505050;
+  border: 2px solid #505050;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.slider-controls button {
+  background-color: transparent;
+  color: #505050;
+  border: 2px solid #505050;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.slider-controls button:hover {
+  background-color: #505050;
+  color: white;
+}
 
 /* results */
 .bg-result h1 {
@@ -693,6 +907,7 @@ a:visited {
   height: 240px; 
 }
 
+
 .box h2 {
   text-align: center;
   margin-top: 20px;
@@ -727,7 +942,9 @@ a:visited {
 
 .grid-item h1 {
   margin: 40px 0;
-  font-size: 2.5em;
+  text-align: center;
+  align-content: center;
+  margin-left: 175px;
 }
 
 .grid-item h2 {
