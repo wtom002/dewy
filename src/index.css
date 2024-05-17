@@ -238,7 +238,7 @@ hr {
   background-color: white; 
   border-color:  #3187AC;
 }
-/* about */
+/* About */
 .bg-about h1 {
   color: white;
   margin-left: -15px;
@@ -250,6 +250,85 @@ hr {
   display: flex;
   align-content: center;
   justify-content: center; /* Horizontally center the content */
+}
+
+.container-1 {
+  margin-top: 40px;
+  padding: 10px;
+  position: relative;
+  background-color: #E0EAEF;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.container-1 h1{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 50px; 
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.container-1 h2{
+  color: #505050;
+  font-weight: 600;
+  font-size: 36px; 
+  padding-bottom: 60px;
+  margin-left: 17vmax;
+  margin-right: 17vmax;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
+
+.container-2 {
+  margin-top: 20px;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.container-2 h1 {
+  display: flex;
+  font-size: 40px;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.inspo-grid {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  grid-gap: 1px; /* Gap between grid items */
+}
+.inspo {
+  position: relative;
+  text-align: center;
+  
+}
+
+.inspo p {
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Optionally, add a semi-transparent background for better readability */
+  padding: 10px;
+}
+.container-2 h2 {
+  display: flex;
+  padding: 100px;
+  font-size: 33px;
+  align-content: center;
+  justify-content: center;
 }
 
 
@@ -501,7 +580,6 @@ hr {
 }
 
 /* Home */
-
 
 .bg-home h1 {
   color: white;
@@ -870,8 +948,6 @@ input:focus {
 .search-result:hover {
   background-color: #efefef;
 }
-
-/* Scan  */
 
 /* Footer */
 footer {
