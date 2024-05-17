@@ -2,90 +2,101 @@
   {
     "id": 0,
     "ingredient": "Antibiotics",
-    "description": "Antibiotics are medications that fight bacterial infections.",
+    "description": "Antibiotics are medications specifically designed to combat bacterial infections within the body. They work by either killing the bacteria directly or inhibiting their growth and reproduction, allowing the body's immune system to eliminate the remaining pathogens.",
     "benefits": ["Fight bacterial infections", "Reduce inflammation associated with acne"],
     "function": ["Kill or inhibit the growth of bacteria on the skin"],
-    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"]
+    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"],
+    "amazon": "https://a.co/d/iCVnjwj"
   },
   {
     "id": 1,
     "ingredient": "Azelaic Acid",
-    "description": "Azelaic acid is a naturally occurring acid found in grains like barley, wheat, and rye.",
+    "description": "Azelaic acid is a naturally occurring acid found in grains like barley, wheat, and rye, and is commonly used in the treatment of acne. It works by reducing the growth of bacteria that cause acne and by keeping the pores of the skin clear.",
     "benefits": ["Treats acne", "Reduces hyperpigmentation", "Inhibits the growth of bacteria"],
     "function": ["Exfoliates the skin", "Unclogs pores", "Reduces inflammation"],
-    "at_a_glance": ["Treats acne", "Reduces hyperpigmentation"]
+    "at_a_glance": ["Treats acne", "Reduces hyperpigmentation"],
+    "amazon": "https://a.co/d/ctFMo3r"
   },
   {
     "id": 2,
     "ingredient": "Benzoyl Peroxide",
-    "description": "Benzoyl peroxide is a topical medication used to treat acne.",
+    "description": "Benzoyl peroxide is available in various strengths and formulations, including gels, creams, and cleansers, allowing for flexible application based on individual skin needs.",
     "benefits": ["Kills acne-causing bacteria", "Reduces inflammation", "Unclogs pores"],
     "function": ["Releases oxygen, which kills bacteria on the skin's surface"],
-    "at_a_glance": ["Treats acne", "Reduces inflammation"]
+    "at_a_glance": ["Treats acne", "Reduces inflammation"],
+    "amazon": "https://a.co/d/1RXR0AX"
   },
   {
     "id": 3,
     "ingredient": "Ceramides",
-    "description": "Ceramides are lipid molecules that help form the skin's barrier and retain moisture.",
+    "description": "Ceramides are lipid molecules that play a crucial role in maintaining the skin's barrier and retaining moisture, which is particularly beneficial for individuals with acne.",
     "benefits": ["Moisturizes the skin", "Strengthens the skin barrier", "Prevents moisture loss"],
     "function": ["Repairs and maintains the skin's barrier function"],
-    "at_a_glance": ["Moisturizes", "Strengthens skin barrier"]
+    "at_a_glance": ["Moisturizes", "Strengthens skin barrier"],
+    "amazon": "https://a.co/d/03lFlzX"
   },
   {
     "id": 4,
     "ingredient": "Corticosteroid Injections",
-    "description": "Corticosteroid injections are medications injected into the skin to reduce inflammation.",
+    "description": "Corticosteroid injections are powerful medications administered directly into the skin to reduce inflammation and swelling. These injections are commonly used to treat various inflammatory skin conditions, including severe or cystic acne. ",
     "benefits": ["Rapidly reduce inflammation", "Alleviate itching and discomfort"],
     "function": ["Suppress the immune response and reduce inflammation"],
-    "at_a_glance": ["Rapidly reduces inflammation"]
+    "at_a_glance": ["Rapidly reduces inflammation"],
+    "amazon": "https://www.amazon.com/s?k=Corticosteroid+Injections"
   },
   {
     "id": 5,
     "ingredient": "Glycerin",
-    "description": "Glycerin is a humectant that attracts moisture to the skin.",
+    "description": "Glycerin is a humectant that attracts moisture to the skin, making it beneficial for acne. By drawing water into the skin's outer layer, glycerin helps maintain hydration, keeping the skin balanced and healthy.",
     "benefits": ["Hydrates the skin", "Improves skin barrier function", "Soothes dryness"],
     "function": ["Draws water from the environment into the skin and helps maintain moisture balance"],
-    "at_a_glance": ["Hydrates", "Improves skin barrier"]
+    "at_a_glance": ["Hydrates", "Improves skin barrier"],
+    "amazon": "https://a.co/d/bCV1Onk"
   },
   {
     "id": 6,
     "ingredient": "Glycolic Acid",
-    "description": "Glycolic acid is an alpha hydroxy acid (AHA) derived from sugar cane.",
+    "description": "Glycolic acid is an alpha hydroxy acid (AHA) derived from sugar cane, renowned for its exfoliating properties and effectiveness in skincare.",
     "benefits": ["Exfoliates the skin", "Increases cell turnover", "Improves skin texture and tone"],
     "function": ["Penetrates the skin to dissolve dead skin cells and unclog pores"],
-    "at_a_glance": ["Exfoliates", "Improves skin texture"]
+    "at_a_glance": ["Exfoliates", "Improves skin texture"],
+    "amazon": "https://a.co/d/cH9sdy2"
   },
   {
     "id": 7,
     "ingredient": "Hyaluronic Acid",
-    "description": "Hyaluronic acid is a naturally occurring substance found in the skin that attracts and retains moisture.",
+    "description": "Hyaluronic acid is a naturally occurring substance found in the skin that attracts and retains moisture, making it especially beneficial for those with acne. ",
     "benefits": ["Hydrates the skin", "Plumps and smooths fine lines and wrinkles", "Improves skin elasticity"],
     "function": ["Attracts and holds water in the skin's dermis"],
-    "at_a_glance": ["Hydrates", "Plumps skin"]
+    "at_a_glance": ["Hydrates", "Plumps skin"],
+    "amazon": "https://a.co/d/gt2fgac"
   },
   {
     "id": 8,
     "ingredient": "Isotretinoin (Accutane)",
-    "description": "Isotretinoin is a medication used to treat severe acne.",
+    "description": "Isotretinoin is a medication used to treat severe acne, particularly in cases that have not responded to other treatments. This powerful drug is a form of vitamin A and works by reducing the amount of oil produced by the skin's sebaceous glands.",
     "benefits": ["Reduces oil production", "Shrinks sebaceous glands", "Prevents acne formation"],
     "function": ["Targets the underlying causes of acne"],
-    "at_a_glance": ["Treats severe acne", "Reduces oil production"]
+    "at_a_glance": ["Treats severe acne", "Reduces oil production"],
+    "amazon": "https://a.co/d/96Yp45r"
   },
   {
     "id": 9,
     "ingredient": "Lactic Acid",
-    "description": "Lactic acid is an alpha hydroxy acid (AHA) derived from milk.",
+    "description": "Lactic acid is an alpha hydroxy acid (AHA) derived from milk, known for its gentle exfoliating properties and ability to improve skin texture.",
     "benefits": ["Exfoliates the skin", "Brightens complexion", "Moisturizes the skin"],
     "function": ["Promotes cell turnover and stimulates collagen production"],
-    "at_a_glance": ["Exfoliates", "Brightens skin"]
+    "at_a_glance": ["Exfoliates", "Brightens skin"],
+    "amazon": "https://a.co/d/ge6nAX6"
   },
   {
     "id": 10,
     "ingredient": "Niacinamide",
-    "description": "Niacinamide, also known as vitamin B3, is a water-soluble vitamin.",
+    "description": "Niacinamide, also known as vitamin B3, is a water-soluble vitamin that plays a crucial role in maintaining overall health. It is a form of niacin that is essential for the proper functioning of the body's cells.",
     "benefits": ["Reduces inflammation", "Regulates oil production", "Improves skin barrier function"],
     "function": ["Boosts collagen production and repairs damaged skin"],
-    "at_a_glance": ["Reduces inflammation", "Regulates oil"]
+    "at_a_glance": ["Reduces inflammation", "Regulates oil"],
+    "amazon": "https://a.co/d/5q4PFvh"
   },
   {
     "id": 11,
@@ -93,7 +104,8 @@
     "description": "Non-comedogenic moisturizers are formulated to not clog pores.",
     "benefits": ["Hydrates the skin", "Prevents acne breakouts", "Soothes dryness"],
     "function": ["Provides hydration without blocking pores"],
-    "at_a_glance": ["Hydrates", "Does not clog pores"]
+    "at_a_glance": ["Hydrates", "Does not clog pores"],
+    "amazon": "https://a.co/d/fMhMJAB"
   },
   {
     "id": 12,
@@ -101,47 +113,53 @@
     "description": "Oral antibiotics are medications taken by mouth to treat bacterial infections.",
     "benefits": ["Fight bacterial infections", "Reduce inflammation associated with acne"],
     "function": ["Kill or inhibit the growth of bacteria in the body"],
-    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"]
+    "at_a_glance": ["Treats bacterial infections", "Reduces inflammation"],
+    "amazon": "https://a.co/d/fyrN6L5"
   },
   {
     "id": 13,
     "ingredient": "Retinoid",
-    "description": "Retinoids are derivatives of vitamin A.",
+    "description": "Retinoids are derivatives of vitamin A that are used to treat several skin conditions.",
     "benefits": ["Stimulates collagen production", "Increases cell turnover", "Unclogs pores"],
     "function": ["Promotes skin renewal and prevents acne formation"],
-    "at_a_glance": ["Stimulates collagen", "Unclogs pores"]
+    "at_a_glance": ["Stimulates collagen", "Unclogs pores"],
+    "amazon": "https://a.co/d/fbHRtgu"
   },
   {
     "id": 14,
     "ingredient": "Salicylic Acid",
-    "description": "Salicylic acid is a beta hydroxy acid (BHA) derived from willow bark.",
+    "description": "Salicylic acid is a beta hydroxy acid (BHA) derived from willow bark that treats and prevents acne along with other skin conditions.",
     "benefits": ["Unclogs pores", "Reduces inflammation", "Exfoliates the skin"],
     "function": ["Penetrates into pores to dissolve oil and dead skin cells"],
-    "at_a_glance": ["Unclogs pores", "Reduces inflammation"]
+    "at_a_glance": ["Unclogs pores", "Reduces inflammation"],
+    "amazon": "https://a.co/d/7wfxnd1"
   },
   {
     "id": 15,
     "ingredient": "Sulfur",
-    "description": "Sulfur is a naturally occurring mineral with antibacterial properties.",
+    "description": "Sulfur is a naturally occurring mineral with antibacterial properties against bacteria causing acne.",
     "benefits": ["Dries out excess oil", "Reduces acne-causing bacteria", "Exfoliates the skin"],
     "function": ["Absorbs excess oil and unclogs pores"],
-    "at_a_glance": ["Dries out oil", "Exfoliates skin"]
+    "at_a_glance": ["Dries out oil", "Exfoliates skin"],
+    "amazon": "https://a.co/d/7wfxnd1"
   },
   {
     "id": 16,
     "ingredient": "Tea Tree oil",
-    "description": "Tea tree oil is an essential oil derived from the leaves of the tea tree plant.",
+    "description": "Tea tree oil is an essential oil derived from the leaves of the tea tree plant that is commonly used to treat acne.",
     "benefits": ["Antimicrobial properties", "Reduces acne inflammation", "Soothes irritated skin"],
     "function": ["Kills acne-causing bacteria and reduces redness"],
-    "at_a_glance": ["Antimicrobial", "Reduces inflammation"]
+    "at_a_glance": ["Antimicrobial", "Reduces inflammation"],
+    "amazon": "https://a.co/d/7wfxnd1"
   },
   {
     "id": 17,
     "ingredient": "Topical Clindamycin",
-    "description": "Topical clindamycin is an antibiotic medication applied to the skin to treat acne.",
+    "description": "Topical clindamycin is an antibiotic medication that helps control acne.",
     "benefits": ["Kills acne-causing bacteria", "Reduces inflammation", "Prevents acne breakouts"],
     "function": ["Inhibits bacterial growth and reduces inflammation"],
-    "at_a_glance": ["Kills bacteria", "Reduces inflammation"]
+    "at_a_glance": ["Kills bacteria", "Reduces inflammation"],
+    "amazon": "https://pharmacy.amazon.com/Perrigo-CLINDAMYCIN-PHOSPHATE-LOTION-Milliliter/dp/B095KWN6X2?ref_=sr_1_1&s=beauty&keywords=topical+clindamycin+lotion&crid=SK2Q2M2YOS9G&sprefix=topical+clinda%2Cbeauty%2C168&dib_tag=se&dib=eyJ2IjoiMSJ9.TgP8VsMbL_AZpAa8BSkh4fYr--tgJBNfa84pi0oQ6BmZIqLODHwYwjrnNRWSI0MFGqXU4DXUCjYL5xAmLWSxwUzCi2CXTMsDfPRapODWwkC6cUZHNu5XY-pe0S1RYsbR3Z75xpjWjhifesLdmAjNvkRTwmDA3BuXkLQ24eljJrVfBMlpV4ZkpgyJFWn9l-R63zAA-gQyERHxRh2CElS3sKywTr8-GK4yqaXL-rIJsBe2ooK60DSy2qYtTh9vmMwLYEsJiVWnfSuYKMpUXGks-qSLMIMJt2zeyrrrd97ih4M.vdu3quad1RoybM-oLrqnFSyVZ8vTTI_jhVj9gcZKadU&qid=1715720881&sr=1-1"
   },
   {
     "id": 18,
@@ -149,7 +167,8 @@
     "description": "Topical retinoids are vitamin A derivatives applied to the skin to treat acne.",
     "benefits": ["Stimulates collagen production", "Increases cell turnover", "Unclogs pores"],
     "function": ["Promotes skin renewal and prevents acne formation"],
-    "at_a_glance": ["Stimulates collagen", "Unclogs pores"]
+    "at_a_glance": ["Stimulates collagen", "Unclogs pores"],
+    "amazon": "https://a.co/d/fmBHVvS"
   },
   {
     "id": 19,
@@ -157,14 +176,19 @@
     "description": "Lightweight sunscreens are sunscreen formulations that feel lightweight on the skin.",
     "benefits": ["Protects against UV damage", "Prevents sunburn", "Reduces risk of skin cancer"],
     "function": ["Blocks harmful UV rays from penetrating the skin"],
-    "at_a_glance": ["Protects from UV", "Lightweight formula"]
+    "at_a_glance": ["Protects from UV", "Lightweight formula"],
+    "amazon": "https://a.co/d/coNyN1B"
   },
   {
     "id": 20,
     "ingredient": "Zinc",
-    "description": "Zinc is a mineral that plays a vital role in skin health and function.",
+    "description": "Zinc is a mineral that protects against inflammation and activates the immune system to trigger healing.",
     "benefits": ["Reduces inflammation", "Regulates oil production", "Promotes wound healing"],
     "function": ["Acts as an antioxidant and anti-inflammatory agent"],
-    "at_a_glance": ["Reduces inflammation", "Regulates oil"]
+    "at_a_glance": ["Reduces inflammation", "Regulates oil"],
+    "amazon": "https://a.co/d/aFzB4gU"
   }
 ]
+
+
+
