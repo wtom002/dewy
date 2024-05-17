@@ -1,106 +1,57 @@
-// // import React, { useRef, useEffect } from 'react'
-// // import NavBar from './NavBar';
+import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
-// // export default function ImageUpload() {
-// //   const handleScanNow = () => {
-// //     navigator.mediaDevices.getUserMedia({ video: true })
-// //       .then((stream) => {
-// //         const videoElement = document.createElement('video');
-// //         videoElement.srcObject = stream;
-// //         videoElement.play();
-// //         document.getElementById('camera-preview').appendChild(videoElement);
-// //       })
-// //       .catch((error) => {
-// //         console.error('Error accessing the camera:', error);
-// //       });
-// //   };
-
-// //   const handleUploadImage = () => {
-// //     fileInputRef.current.click();
-// //   };
-
-// //   const handleFileChange = (event) => {
-// //     const file = event.target.files[0];
-// //     if (file) {
-// //       console.log('Uploaded file:', file);
-// //     }
-// //   };
-
-// //   const fileInputRef = useRef(null);
-
-// //   useEffect(() => {
-// //     return () => {
-// //       const videoElement = document.querySelector('video');
-// //       if (videoElement) {
-// //         videoElement.srcObject.getTracks().forEach(track => track.stop());
-// //       }
-// //     };
-// //   }, []);
-
-// //   return (
-// //     <div className="image-upload">
-// //     <div className="container-fluid bg-image">
-// //       <div className="row">
-        
-// //       <NavBar darkMode={true} />
-// //           <div className="d-flex align-items-center text-center mx-auto vh-100">
-// //             <div>
-// //               <h2>instant skin analysis</h2>
-// //               <div className="mt-4">
-// //                 <button onClick={handleScanNow}>SCAN NOW</button>
-// //                 <button onClick={handleUploadImage}>UPLOAD IMAGE</button>
-// //                 <input
-// //                   type="file"
-// //                   accept="image/*"
-// //                   style={{ display: 'none' }}
-// //                   onChange={handleFileChange}
-// //                   ref={fileInputRef}
-// //                 />
-// //               </div>
-// //             </div>
-// //         </div>
-// //       </div>
-// //       </div>
-// //       </div>
-// //   );
-// // }
-
-import React, { useRef, useEffect, useState, ReactDOM, render } from 'react';
-import { Link  } from 'react-router-dom';
 import NavBar from './NavBar';
-import * as tf from "@tensorflow/tfjs"
+/*import * as tf from "@tensorflow/tfjs";
 import * as facemesh from "@tensorflow-models/face-landmarks-detection";
 import { drawMesh } from "../utilities";
-import Webcam from "react-webcam";
+import Webcam from "react-webcam";*/
 import Onboard from './Onboard';
-//temp fix for demo
 
 export default function ImageUpload() {
-  const webcamRef = useRef(null);
-  const canvasRef = useRef(null);
+ /* const webcamRef = useRef(null);
+  const canvasRef = useRef(null);*/
+  const fileInputRef = useRef(null);
+  const navigate = useNavigate();
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [error, setError] = useState('');
 
-  //const [showWebcam, setShowWebcam] = useState(false);
   
-
-  // const toggleWebcam = () => {
-  //   setShowWebcam(!showWebcam);
-  // };
-
-  const handleUploadImage = () => {
-    fileInputRef.current.click();
-  };
-
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (file) {
-      console.log('Uploaded file:', file);
+    const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/bmp'];
+
+    if (file && validTypes.includes(file.type)) {
+      setSelectedFile(file);
+      setError('');
+    } else {
+      setSelectedFile(null);
+      setError('Please upload a file in .jpg, .jpeg, .png, or .bmp format.');
     }
   };
 
-  const fileInputRef = useRef(null);
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      setError('No file selected or invalid file format.');
+      return;
+    }
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      navigate('../result', { state: { result: response.data } });
+    } catch (error) {
+      console.error('Error uploading the file', error);
+      setError('Error uploading the file');
+    }
+  };
 
-
-  const runFacemesh = async () => {
+  /*const runFacemesh = async () => {
     const model = facemesh.SupportedModels.MediaPipeFaceMesh;
     const detectorConfig = {
       runtime: "tfjs",
@@ -117,98 +68,62 @@ export default function ImageUpload() {
       typeof webcamRef.current !== "undefined" &&
       webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4 &&
-      canvasRef.current !== null // Add this check
+      canvasRef.current !== null
     ) {
-      // Get Video Properties
       const video = webcamRef.current.video;
       const videoWidth = video.videoWidth;
       const videoHeight = video.videoHeight;
-  
-      // Set video width
+
       video.width = videoWidth;
       video.height = videoHeight;
-  
-      // Set canvas width
+
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
-  
-      // Wait for video to load metadata
+
       await video.play();
-  
-      // Make Detections
+
       const face = await net.estimateFaces(video);
-  
-      // Get canvas context
+
       const ctx = canvasRef.current.getContext("2d");
       requestAnimationFrame(() => {
         drawMesh(face, ctx);
       });
     } else {
-      // Retry detection after a short delay if video is not ready
       setTimeout(() => detect(net), 200);
     }
   };
-  
 
-
-  useEffect(()=>{runFacemesh()}, []);
+  useEffect(() => { runFacemesh(); }, []);*/
 
   return (
-    
-    <><div className="image-upload">
-      <div className="dbanner bg-scan banner-l">
-        <div className="">
-          <NavBar darkMode={true} />
+    <>
+      <div className="image-upload">
+        <div className="dbanner bg-scan banner-l">
+          <div>
+            <NavBar darkMode={true} />
             <div id="camera-preview"></div>
-          <div className="">
             <div>
               <h1>instant skin analysis</h1>
               <h2>smart scan. targeted care.</h2>
               <div className="scan-buttons">
-                <Link to="../result" /*temp fix for demo*/>
-                  <button /*onClick={useSubmitScan}*/>SCAN NOW</button>
-                </Link>
-                <Webcam
-                  ref={webcamRef}
-                  style={{
-                    position: "absolute",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    left: 0,
-                    right: 0,
-                    textAlign: "center",
-                    zindex: 9,
-                    width: 640,
-                    height: 480,
-                  }} />
-
-                <canvas
-                  ref={canvasRef}
-                  style={{
-                    position: "absolute",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    left: 0,
-                    right: 0,
-                    textAlign: "center",
-                    zindex: 9,
-                    width: 640,
-                    height: 480,
-                  }} />
-                <button onClick={handleUploadImage}>UPLOAD IMAGE</button>
+                
+                  <button onClick={handleUpload}>SCAN NOW</button>
+                
+                <button onClick={() => fileInputRef.current.click()}>UPLOAD IMAGE</button>
                 <input
                   type="file"
                   accept="image/*"
-                  style={{ display: 'none' }}
+                  style={{ display: 'None' }}
                   onChange={handleFileChange}
-                  ref={fileInputRef} />
+                  ref={fileInputRef}
+                />
               </div>
               <h2>photo tips and tricks</h2>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <Onboard /></>
+      <Onboard />
+    </>
   );
 }

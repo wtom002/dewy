@@ -1,18 +1,18 @@
 [
     {
-      "condition": "White Heads",
+      "condition": "Whiteheads",
       "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
     },
     {
-      "condition": "Black Heads",
+      "condition": "Blackheads",
       "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Niacinamide", "Zinc"]
     },
     {
-      "condition": "Papule",
+      "condition": "Papules",
       "treatments": ["Sulfur", "Salicylic Acid", "Glycolic Acid", "Azelaic Acid", "Benzoyl Peroxide"]
     },
     {
-      "condition": "Pustule",
+      "condition": "Pustules",
       "treatments": ["Sulfur", "Salicylic Acid", "Azelaic Acid", "Benzoyl Peroxide", "Tea Tree oil"]
     },
     {
@@ -24,7 +24,7 @@
       "treatments": ["Hyaluronic Acid", "Ceramides", "Glycerin", "Lactic Acid"]
     },
     {
-      "condition": "Mechanica",
+      "condition": "Acne Mechanica",
       "treatments": ["Benzoyl Peroxide", "Topical Clindamycin", "Non-comedogenic Moisturizers", "Lightweight Sunscreens"]
     }
   ]

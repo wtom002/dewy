@@ -1,136 +1,153 @@
-import NavBar from './NavBar';
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import conditions from './conditions.json';
-import ingredientsList from './ingredients.json';
+import NavBar from "./NavBar";
+import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import conditions from "./conditions.json";
+import ingredientsList from "./ingredients.json";
 
 export default function ResultsPage() {
-    const [selectedCondition, setSelectedCondition] = useState('');
-    const [ingredients, setIngredients] = useState([]);
-    const [openPopupIndex, setOpenPopupIndex] = useState(null);
+  const location = useLocation();
+  const result = location.state?.result;
+  const [ingredients, setIngredients] = useState([]);
+  const [openPopupIndex, setOpenPopupIndex] = useState(null);
 
-    const openPopup = (index) => {
-        setOpenPopupIndex(index);
-    };
-    const closePopup = () => {
-        setOpenPopupIndex(null);
-    };
-    const handleConditionChange = (e) => {
-      const condition = e.target.value;
-      setSelectedCondition(condition);
-      const selectedConditionData = conditions.find(item => item.condition === condition);
+  const classLabels = [
+    "Blackheads",
+    "Cystic Acne",
+    "Dry Skin",
+    "Acne Mechanica",
+    "Papules",
+    "Pustules",
+    "Whiteheads",
+  ];
 
-      if (selectedConditionData) {
-        setIngredients(ingredientsList.filter(ingredient => selectedConditionData.treatments.includes(ingredient.ingredient)));
-      } else {
-        setIngredients([]);
+  function indexOf(arr) {
+    try {
+      if (arr.length === 0) {
+        throw new Error("The array is empty.");
       }
-      console.log(ingredients);
-    };
 
-    return (
-        <div>
-        <div className="dbanner banner-s bg-result">
+      let largestIndex = 0;
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[largestIndex]) {
+          largestIndex = i;
+        }
+      }
+      return largestIndex;
+    } catch (error) {
+      console.error(error.message);
+      return -1;
+    }
+  }
+
+  const conditionName = result ? classLabels[indexOf(Math.max(result.predictions[0]))]: "";
+
+  const conditionTreatments = conditions.find(
+    (item) => item.condition === conditionName
+  );
+
+  useEffect(() => {
+    if (conditionTreatments) {
+      setIngredients(
+        ingredientsList.filter((ingredient) =>
+          conditionTreatments.treatments.includes(ingredient.ingredient)
+        )
+      );
+    }
+  }, []);
+
+  const openPopup = (index) => {
+    setOpenPopupIndex(index);
+  };
+
+  const closePopup = () => {
+    setOpenPopupIndex(null);
+  };
+
+  // debug
+  console.log(result);
+  console.log(result.predictions[0]);
+  console.log(conditionName);
+  console.log(typeof conditionName);
+  console.log(conditionTreatments);
+  return (
+    <div>
+      <div className="dbanner banner-s bg-result">
         <NavBar darkMode={true} />
         <h1>take a look at your scan results.</h1>
-        <h2>it looks like your main skin concern is:  <select onChange={handleConditionChange} value={selectedCondition}>
-        <option value="">Select a condition</option>
-        {conditions.map(item => (
-          <option key={item.condition} value={item.condition}>{item.condition}</option>
-        ))}
-      </select> </h2>
-        <h2>following an analysis of your skin, we recommend {ingredients.length} essential ingredients...</h2>
+        <h2>It looks like your main skin concern is: {conditionName}</h2>
+        <h2>
+          following an analysis of your skin, we recommend {ingredients.length}{" "}
+          essential ingredients...
+        </h2>
         <Link to="/scan">
-        <button>REDO ANALYSIS</button>
+          <button>REDO ANALYSIS</button>
         </Link>
-        </div>
-        <h1 className="results-heading">ingredients</h1>
-        <hr></hr>
-        <div className="treatments"> 
-          {ingredients && ingredients.map((ingredient, index) => {
-            return (
-        <div key={index}>
-          <h1>{ingredient.ingredient}</h1>
-          <h2>{ingredient.description}</h2>
-          <button onClick={() => openPopup(index)}>
-                  READ MORE -{">"}
-                </button>
-        {openPopupIndex === index && (
-            <div className="popup">
-              <button onClick={closePopup}>X</button>
-              <h1>{ingredient.ingredient}</h1>
-
-              <h2>BENEFITS</h2>
-              <ul>
-                {ingredient.benefits.map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
-                ))}
-              </ul>
-              <h2>FUNCTIONS</h2>
-              <ul>
-                {ingredient.function.map((func, index) => (
-                  <li key={index}>{func}</li>
-                ))}
-              </ul>
-              <h2>AT A GLANCE</h2>
-              <ul>
-                {ingredient.at_a_glance.map((glance, index) => (
-                  <li key={index}>{glance}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-        </div>
-        );
-            })}
       </div>
-        {/* <div className="cards-container">
-            <div className="cards">
-            <h1>niacinamide</h1>
-            <h2>Niacinamide reduces inflammation and acne by regulating oil production, minimizing pores, and preventing bacterial growth. It strengthens the skin's barrier against environmental stressors, fades acne scars, and evens out skin tone by promoting cell renewal.</h2>
-            <button>READ MORE -{'>'} </button>
+      <h1 className="results-heading">ingredients</h1>
+      <hr></hr>
+      <div className="treatments">
+        {ingredients &&
+          ingredients.map((ingredient, index) => (
+            <div key={index}>
+              <h1>{ingredient.ingredient}</h1>
+              <h2>{ingredient.description}</h2>
+              <button onClick={() => openPopup(index)}>READ MORE -{">"}</button>
+              {openPopupIndex === index && (
+                <div className="popup">
+                  <button onClick={closePopup}>X</button>
+                  <h1>{ingredient.ingredient}</h1>
+                  <h2>BENEFITS</h2>
+                  <ul>
+                    {ingredient.benefits.map((benefit, idx) => (
+                      <li key={idx}>{benefit}</li>
+                    ))}
+                  </ul>
+                  <h2>FUNCTIONS</h2>
+                  <ul>
+                    {ingredient.function.map((func, idx) => (
+                      <li key={idx}>{func}</li>
+                    ))}
+                  </ul>
+                  <h2>AT A GLANCE</h2>
+                  <ul>
+                    {ingredient.at_a_glance.map((glance, idx) => (
+                      <li key={idx}>{glance}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-            <div className="cards">
-            <h1>azelaic acid</h1>
-            <h2>Azelaic acid fights acne by eliminating breakout-causing bacteria, reducing inflammation, and unclogging pores. It prevents future acne by decreasing keratin production and improves skin texture by fading post-acne scars and hyperpigmentation. Additionally, it evens out skin tone, reduces redness, and effectively treats acne, rosacea, and hyperpigmentation.</h2>
-            <button>READ MORE -{'>'} </button>
-            </div>
-            <div className="cards">
-            <h1>salicylic acid</h1>
-            <h2>Salicylic acid, a beta-hydroxy acid, deeply exfoliates, unclogs pores, reduces sebum, and eliminates dead cells, effectively treating and preventing acne. Its penetration dissolves pore-clogging debris, while its anti-inflammatory properties reduce redness and swelling, promoting a clearer, smoother, and more even-toned complexion.</h2>
-            <button>READ MORE -{'>'} </button>
-            </div>
-            <div className="cards">
-            <h1>benzoyl peroxide</h1>
-            <h2>Benzoyl peroxide targets acne bacteria, reducing inflammation and preventing new breakouts by introducing oxygen into pores. It exfoliates the skin, clearing away dead cells for a clearer, healthier complexion.</h2>
-            <button>READ MORE -{'>'} </button>
-            </div>
-        </div> */}
-
-        <div className="rec-container">
-            <h1>We Recommend these products <p>from amazon.com</p></h1>
-            <div className="rec-ingred">
-            <h2>popular</h2>
-            <h2>niacinamide</h2>
-            <h2>azelaic acid</h2>
-            <h2>salicylic acid</h2>
-            
-            <h2>benzoyl peroxide</h2>
-            
-            </div>
-            <div className="amazon">
-            <div className="recs">
-            <h1>product 1<h2>blah</h2> </h1>
-            </div>
-            <div className="recs">
-            <h1>product 2<h2>blah</h2>  </h1>
-            </div>
-            <div className="recs">
-            <h1>product 3<h2>blah</h2></h1>
-            </div>
-            </div>
+          ))}
+      </div>
+      <div className="rec-container">
+        <h1>
+          We Recommend these products <p>from amazon.com</p>
+        </h1>
+        <div className="rec-ingred">
+          <h2>popular</h2>
+          <h2>niacinamide</h2>
+          <h2>azelaic acid</h2>
+          <h2>salicylic acid</h2>
+          <h2>benzoyl peroxide</h2>
         </div>
+        <div className="amazon">
+          <div className="recs">
+            <h1>
+              product 1<h2>blah</h2>{" "}
+            </h1>
+          </div>
+          <div className="recs">
+            <h1>
+              product 2<h2>blah</h2>{" "}
+            </h1>
+          </div>
+          <div className="recs">
+            <h1>
+              product 3<h2>blah</h2>
+            </h1>
+          </div>
         </div>
-    )
-  }
+      </div>
+    </div>
+  );
+}
