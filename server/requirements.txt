@@ -97,7 +97,6 @@ tornado==6.2
 traitlets==5.9.0
 typing_extensions==4.11.0
 urllib3==2.2.1
-vercel==0.2.1
 wcwidth==0.2.6
 Werkzeug==3.0.2
 wheel==0.43.0
