@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://dewy-glazed-donuts.vercel.app"}})
+CORS(app, origins=['https://dewy-glazed-donuts-8psbzajha-wtom002s-projects.vercel.app'], methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
 
 
