@@ -26,7 +26,7 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  
     return image
 
-@app.route('/upload', methods=['POST'])
+@app.route('/api/upload', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
