@@ -8,7 +8,6 @@ import io
 app = Flask(__name__)
 CORS(app)
 
-# Load the model and handle potential errors
 try:
     model = tf.keras.models.load_model('models/my_model.h5')
 except Exception as e:
@@ -22,7 +21,7 @@ def allowed_file(filename):
 
 def preprocess_image(image):
     image = image.resize((256, 256))
-    image = np.array(image)
+    image = np.array(image) / 255.0
     image = np.expand_dims(image, axis=0)  
     return image
 
@@ -38,8 +37,8 @@ def upload_image():
     
     try:
         image = Image.open(file.stream)
-        image.verify()  # Verify that it is, in fact, an image
-        file.stream.seek(0)  # Reset stream position to the start
+        image.verify()  #verify image
+        file.stream.seek(0) 
         image = Image.open(file.stream)
         processed_image = preprocess_image(image)
         predictions = model.predict(processed_image)
