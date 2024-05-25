@@ -9,6 +9,8 @@ export default function ResultsPage() {
   const result = location.state?.result;
   const [ingredients, setIngredients] = useState([]);
   const [openPopupIndex, setOpenPopupIndex] = useState(null);
+  const [conditionName, setConditionName] = useState("");
+  const [conditionTreatments, setConditionTreatments] = useState(null);
 
   const classLabels = [
     "Blackheads",
@@ -20,7 +22,7 @@ export default function ResultsPage() {
     "Whiteheads",
   ];
 
-  function indexOf(arr) {
+  function indexOfLargestElement(arr) {
     try {
       if (arr.length === 0) {
         throw new Error("The array is empty.");
@@ -39,21 +41,28 @@ export default function ResultsPage() {
     }
   }
 
-  let conditionName = result ? classLabels[indexOf(Math.max(result.predictions[0]))]: "";
-
-  const conditionTreatments = conditions.find(
-    (item) => item.condition === conditionName
-  );
-
   useEffect(() => {
-    if (conditionTreatments) {
-      setIngredients(
-        ingredientsList.filter((ingredient) =>
-          conditionTreatments.treatments.includes(ingredient.ingredient)
-        )
+    if (result && result.predictions && result.predictions[0]) {
+      const largestIndex = indexOfLargestElement(result.predictions[0]);
+      const name = classLabels[largestIndex];
+      setConditionName(name);
+
+      const treatments = conditions.find(
+        (item) => item.condition === name
       );
+      setConditionTreatments(treatments);
+
+      if (treatments) {
+        setIngredients(
+          ingredientsList.filter((ingredient) =>
+            treatments.treatments.includes(ingredient.ingredient)
+          )
+        );
+      } else {
+        setIngredients([]);
+      }
     }
-  }, []);
+  }, [result]);
 
   const openPopup = (index) => {
     setOpenPopupIndex(index);
@@ -64,11 +73,12 @@ export default function ResultsPage() {
   };
 
   // debug
-  // console.log(result);
-  // console.log(result.predictions[0]);
-  // console.log(conditionName);
-  // console.log(typeof conditionName);
-  // console.log(conditionTreatments);
+  console.log(result);
+  console.log(result?.predictions[0]);
+  console.log(conditionName);
+  console.log(typeof conditionName);
+  console.log(conditionTreatments);
+
   return (
     <div>
       <div className="dbanner banner-s bg-result">
@@ -119,35 +129,35 @@ export default function ResultsPage() {
             </div>
           ))}
       </div>
-      <div className="rec-container">
-        <h1>
-          We Recommend these products <p>from amazon.com</p>
-        </h1>
-        <div className="rec-ingred">
-          <h2>popular</h2>
-          <h2>niacinamide</h2>
-          <h2>azelaic acid</h2>
-          <h2>salicylic acid</h2>
-          <h2>benzoyl peroxide</h2>
-        </div>
-        <div className="amazon">
-          <div className="recs">
-            <h1>
-              product 1<h2>blah</h2>{" "}
-            </h1>
-          </div>
-          <div className="recs">
-            <h1>
-              product 2<h2>blah</h2>{" "}
-            </h1>
-          </div>
-          <div className="recs">
-            <h1>
-              product 3<h2>blah</h2>
-            </h1>
-          </div>
-        </div>
-      </div>
+      // <div className="rec-container">
+      //   <h1>
+      //     We Recommend these products <p>from amazon.com</p>
+      //   </h1>
+      //   <div className="rec-ingred">
+      //     <h2>popular</h2>
+      //     <h2>niacinamide</h2>
+      //     <h2>azelaic acid</h2>
+      //     <h2>salicylic acid</h2>
+      //     <h2>benzoyl peroxide</h2>
+      //   </div>
+      //   <div className="amazon">
+      //     <div className="recs">
+      //       <h1>
+      //         product 1<h2>blah</h2>{" "}
+      //       </h1>
+      //     </div>
+      //     <div className="recs">
+      //       <h1>
+      //         product 2<h2>blah</h2>{" "}
+      //       </h1>
+      //     </div>
+      //     <div className="recs">
+      //       <h1>
+      //         product 3<h2>blah</h2>
+      //       </h1>
+      //     </div>
+      //   </div>
+      // </div>
     </div>
   );
 }
