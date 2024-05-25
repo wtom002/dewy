@@ -6,8 +6,8 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, origins=['https://dewy-glazed-donuts.vercel.app'], methods=['GET', 'POST'], allow_headers=['Content-Type'])
-
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 
@@ -30,6 +30,7 @@ def preprocess_image(image):
     return image
 
 @app.route('/upload', methods=['POST'])
+@cross_origin()
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
