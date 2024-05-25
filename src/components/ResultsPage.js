@@ -64,11 +64,11 @@ export default function ResultsPage() {
   };
 
   // debug
-  console.log(result);
-  console.log(result.predictions[0]);
-  console.log(conditionName);
-  console.log(typeof conditionName);
-  console.log(conditionTreatments);
+  // console.log(result);
+  // console.log(result.predictions[0]);
+  // console.log(conditionName);
+  // console.log(typeof conditionName);
+  // console.log(conditionTreatments);
   return (
     <div>
       <div className="dbanner banner-s bg-result">
