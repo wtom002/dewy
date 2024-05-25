@@ -39,7 +39,7 @@ export default function ResultsPage() {
     }
   }
 
-  const conditionName = result ? classLabels[indexOf(Math.max(result.predictions[0]))]: "";
+  let conditionName = result ? classLabels[indexOf(Math.max(result.predictions[0]))]: "";
 
   const conditionTreatments = conditions.find(
     (item) => item.condition === conditionName
