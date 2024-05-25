@@ -10,7 +10,7 @@ CORS(app)
 
 # Load the model and handle potential errors
 try:
-    model = tf.keras.models.load_model('./models/my_model.h5')
+    model = tf.keras.models.load_model('models/my_model.h5')
 except Exception as e:
     print(f"Error loading model: {e}")
     model = None
