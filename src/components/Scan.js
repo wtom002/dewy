@@ -16,7 +16,7 @@ export default function ImageUpload() {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [error, setError] = useState('');
-
+  const apiUrl = process.env.REACT_APP_API_URL;
   
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -39,7 +39,7 @@ export default function ImageUpload() {
     const formData = new FormData();
     formData.append('file', selectedFile);
     try {
-      const response = await axios.post('dewy-lco6.vercel.app/upload', formData, {
+      const response = await axios.post('${apiUrl}/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
