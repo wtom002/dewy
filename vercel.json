@@ -6,10 +6,10 @@
       "use": "@vercel/python"
     },
     {
-      "src": "src/package.json",
+      "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "src/build"
+        "distDir": "client/build"
       }
     }
   ],
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/src/$1"
+      "dest": "/client/$1"
     }
   ]
 }
