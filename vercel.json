@@ -5,17 +5,10 @@
       "src": "server/flask-server.py",
       "use": "@vercel/python"
     },
-    {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "client/build"
-      }
-    }
   ],
   "routes": [
     {
-      "src": "/server/(.*)",
+      "src": "/api/(.*)",
       "dest": "/server/app.py"
     },
     {
