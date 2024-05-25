@@ -22,7 +22,7 @@ def allowed_file(filename):
 
 def preprocess_image(image):
     image = image.resize((256, 256))
-    image = np.array(image) / 255.0  
+    image = np.array(image)
     image = np.expand_dims(image, axis=0)  
     return image
 
