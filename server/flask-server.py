@@ -6,7 +6,8 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 try:
     model = tf.keras.models.load_model('models/my_model.h5')
