@@ -11,8 +11,8 @@
       }
     ],
     "routes": [
-      { "src": "/api/upload", "dest": "/server/flask-server.py" },
-      { "src": "/api/(.*)", "dest": "/server/flask-server.py" },
+      { "src": "/api/upload", "dest": "https://dewy-eight.vercel.app/api/upload" },
+      { "src": "/api/(.*)", "dest": "https://dewy-eight.vercel.app/api/$1" },
       { "src": "/(.*)", "dest": "/client/build/$1" }
     ]
   }
