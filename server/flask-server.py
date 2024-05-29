@@ -6,9 +6,14 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://dewy-glazed-donuts.vercel.app"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
-
+# CORS(app, resources={r"/*": {"origins": "https://dewy-glazed-donuts.vercel.app"}})
+# app.config['CORS_HEADERS'] = 'Content-Type'
+@app.after_request
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
+    return response
 
 
 
@@ -29,6 +34,14 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  
     return image
 
+@app.route('/upload', methods=['OPTIONS'])
+def upload_options():
+    response = jsonify({})
+    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
+    return response
+    
 @app.route('/upload', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
