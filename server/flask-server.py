@@ -4,17 +4,27 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
-
+from http.server import BaseHTTPRequestHandler
+ 
+class handler(BaseHTTPRequestHandler):
+ 
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type','text/plain')
+        self.end_headers()
+        self.wfile.write('Hello, world!'.encode('utf-8'))
+        return
+        
 app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "https://dewy-lco6.vercel.app/"}})
 # app.config['CORS_HEADERS'] = 'Content-Type'
-@app.after_request
-def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app/'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
-    return response
+# @app.after_request
+# def add_cors_headers(response):
+#     response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app/'
+#     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+#     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
+#     return response
 
 try:
     model = tf.keras.models.load_model('models/my_model.h5')
@@ -33,13 +43,13 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  
     return image
 
-@app.route('/api/upload', methods=['OPTIONS'])
-def upload_options():
-    response = jsonify({})
-    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app/'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
-    return response
+# @app.route('/api/upload', methods=['OPTIONS'])
+# def upload_options():
+#     response = jsonify({})
+#     response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app/'
+#     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+#     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
+#     return response
     
 @app.route('/api/upload', methods=['POST'])
 def upload_image():
