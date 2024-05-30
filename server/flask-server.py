@@ -7,7 +7,7 @@ import io
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "https://dewy-glazed-donuts.vercel.app/"}})
+CORS(app, resources={r"/*": {"origins": "https://dewy-lco6.vercel.app/"}})
 # app.config['CORS_HEADERS'] = 'Content-Type'
 @app.after_request
 def add_cors_headers(response):
