@@ -8,10 +8,10 @@ import io
 app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "https://dewy-glazed-donuts.vercel.app"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
+# app.config['CORS_HEADERS'] = 'Content-Type'
 @app.after_request
 def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-lco6.vercel.app/api/upload'
+    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-lco6.vercel.app/'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
     return response
@@ -36,7 +36,7 @@ def preprocess_image(image):
 @app.route('/api/upload', methods=['OPTIONS'])
 def upload_options():
     response = jsonify({})
-    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-lco6.vercel.app/api/upload'
+    response.headers['Access-Control-Allow-Origin'] = 'https://dewy-lco6.vercel.app/'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
     return response
