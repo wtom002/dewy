@@ -1,13 +1,10 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "deploy.sh", "use": "@vercel/python" }
+  ],
   "routes": [
-    {
-      "src": "/upload",
-      "dest": "/server/flask-server.py"  
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/build/$1"  
-    }
+    { "src": "/api/upload", "dest": "5000" }, 
+    { "src": "/(.*)", "dest": "/client/build/index.html" } 
   ]
 }
