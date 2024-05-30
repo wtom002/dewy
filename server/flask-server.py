@@ -1,12 +1,14 @@
 from flask import Flask, request, jsonify
-# from flask_cors import CORS
+from flask_cors import CORS
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
 from http.server import BaseHTTPRequestHandler
  
-# CORS(app, resources={r"/api/*": {"origins": ["https://dewy-glazed-donuts.vercel.app"]}})
+
+app = Flask(__name__)
+CORS(app)
 
 # app.config['CORS_HEADERS'] = 'Content-Type'
 # @app.after_request
@@ -41,7 +43,7 @@ def preprocess_image(image):
 #     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
 #     return response
     
-@app.route('/api/upload', methods=['POST'])
+@app.route('/api/upload', methods=['POST', 'GET'])
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
