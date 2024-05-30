@@ -31,7 +31,7 @@ export default function ImageUpload() {
     }
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async () => {     
     if (!selectedFile) {
       setError('No file selected or invalid file format.');
       return;
@@ -39,7 +39,7 @@ export default function ImageUpload() {
     const formData = new FormData();
     formData.append('file', selectedFile);
     try {
-      const response = await axios.post('https://dewy-lco6.vercel.app/upload', formData, {
+      const response = await axios.post('https://dewy-backend.vercel.app/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
