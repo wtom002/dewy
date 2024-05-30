@@ -3,10 +3,11 @@
   "routes": [
     {
       "src": "/api/upload",
-      "dest": "/server/flask-server.py"
+      "dest": "/server/flask-server.py"  
+    },
     {
       "src": "/(.*)",
-      "dest": "/client/build/$1" 
+      "dest": "/client/build/$1"  
     }
   ]
 }
