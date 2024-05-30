@@ -11,7 +11,7 @@
       }
     ],
     "routes": [
-      { "src": "/upload", "dest": "/server/flask-server.py" },
+      { "src": "/api/upload", "dest": "/server/flask-server.py" },
       { "src": "/(.*)", "dest": "/client/build/$1" }
     ]
   }

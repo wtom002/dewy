@@ -33,7 +33,7 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  
     return image
 
-@app.route('/upload', methods=['OPTIONS'])
+@app.route('/api/upload', methods=['OPTIONS'])
 def upload_options():
     response = jsonify({})
     response.headers['Access-Control-Allow-Origin'] = 'https://dewy-glazed-donuts.vercel.app/'
@@ -41,7 +41,7 @@ def upload_options():
     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
     return response
     
-@app.route('/upload', methods=['POST'])
+@app.route('/api/upload', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
