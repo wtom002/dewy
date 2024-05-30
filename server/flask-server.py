@@ -16,8 +16,6 @@ def add_cors_headers(response):
     response.headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE'
     return response
 
-
-
 try:
     model = tf.keras.models.load_model('models/my_model.h5')
 except Exception as e:
