@@ -42,8 +42,8 @@ export default function ResultsPage() {
   }
 
   useEffect(() => {
-    if (result && result.predictions && result.predictions[0]) {
-      const largestIndex = indexOfLargestElement(result.predictions[0]);
+    if (result && result[0]) {
+      const largestIndex = indexOfLargestElement(result[0]);
       const name = classLabels[largestIndex];
       setConditionName(name);
 
@@ -71,13 +71,6 @@ export default function ResultsPage() {
   const closePopup = () => {
     setOpenPopupIndex(null);
   };
-
-  // debug
-  console.log(result);
-  console.log(result?.predictions[0]);
-  console.log(conditionName);
-  console.log(typeof conditionName);
-  console.log(conditionTreatments);
 
   return (
     <div>
@@ -129,35 +122,35 @@ export default function ResultsPage() {
             </div>
           ))}
       </div>
-      // <div className="rec-container">
-      //   <h1>
-      //     We Recommend these products <p>from amazon.com</p>
-      //   </h1>
-      //   <div className="rec-ingred">
-      //     <h2>popular</h2>
-      //     <h2>niacinamide</h2>
-      //     <h2>azelaic acid</h2>
-      //     <h2>salicylic acid</h2>
-      //     <h2>benzoyl peroxide</h2>
-      //   </div>
-      //   <div className="amazon">
-      //     <div className="recs">
-      //       <h1>
-      //         product 1<h2>blah</h2>{" "}
-      //       </h1>
-      //     </div>
-      //     <div className="recs">
-      //       <h1>
-      //         product 2<h2>blah</h2>{" "}
-      //       </h1>
-      //     </div>
-      //     <div className="recs">
-      //       <h1>
-      //         product 3<h2>blah</h2>
-      //       </h1>
-      //     </div>
-      //   </div>
-      // </div>
+      {/* <div className="rec-container">
+        <h1>
+          We Recommend these products <p>from amazon.com</p>
+        </h1>
+        <div className="rec-ingred">
+          <h2>popular</h2>
+          <h2>niacinamide</h2>
+          <h2>azelaic acid</h2>
+          <h2>salicylic acid</h2>
+          <h2>benzoyl peroxide</h2>
+        </div>
+        <div className="amazon">
+          <div className="recs">
+            <h1>
+              product 1<h2>blah</h2>{" "}
+            </h1>
+          </div>
+          <div className="recs">
+            <h1>
+              product 2<h2>blah</h2>{" "}
+            </h1>
+          </div>
+          <div className="recs">
+            <h1>
+              product 3<h2>blah</h2>
+            </h1>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 }
