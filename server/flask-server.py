@@ -66,8 +66,12 @@ def upload_image():
 def handler(event, context):
     return app(event, context)
 
+@app.route('/')
+def hello():
+    return 'Hello from Flask!'
+
 if __name__ == '__main__':
     if model:
-        app.run(debug=True)
+        app.run(host='0.0.0.0', port=5000)
     else:
         print("Model could not be loaded. Exiting.")
