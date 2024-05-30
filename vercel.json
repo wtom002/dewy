@@ -1,11 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "client/package.json", "use": "@vercel/node" }, // For frontend
-    { "src": "deploy.sh", "use": "@vercel/static-build" } // For backend
+    { "src": "client/package.json", "use": "@vercel/node" }, 
+    { "src": "deploy.sh", "use": "@vercel/static-build" } 
   ],
   "routes": [
-    { "src": "/api/upload", "dest": "5000" }, // Route to Flask server
-    { "src": "/(.*)", "dest": "client/build/$1" } // Route to React frontend
+    { "src": "/api/upload", "dest": "5000" }, 
+    { "src": "/(.*)", "dest": "client/build/$1" } 
   ]
 }
