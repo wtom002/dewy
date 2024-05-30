@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/upload",
+      "dest": "/server/flask-server.py"
+    {
+      "src": "/(.*)",
+      "dest": "/client/build/$1" 
+    }
+  ]
+}

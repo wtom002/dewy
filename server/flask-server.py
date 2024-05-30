@@ -1,23 +1,13 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+# from flask_cors import CORS
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
 from http.server import BaseHTTPRequestHandler
  
-class handler(BaseHTTPRequestHandler):
- 
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type','text/plain')
-        self.end_headers()
-        self.wfile.write('Hello, world!'.encode('utf-8'))
-        return
-        
-app = Flask(__name__)
+# CORS(app, resources={r"/api/*": {"origins": ["https://dewy-glazed-donuts.vercel.app"]}})
 
-CORS(app, resources={r"/*": {"origins": "https://dewy-glazed-donuts.vercel.app/"}})
 # app.config['CORS_HEADERS'] = 'Content-Type'
 # @app.after_request
 # def add_cors_headers(response):

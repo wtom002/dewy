@@ -39,7 +39,7 @@ export default function ImageUpload() {
     const formData = new FormData();
     formData.append('file', selectedFile);
     try {
-      const response = await axios.post('https://dewy-backend.vercel.app/api/upload', formData, {
+      const response = await axios.post('/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
