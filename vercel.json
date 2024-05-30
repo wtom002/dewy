@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/upload",
+      "src": "/upload",
       "dest": "/server/flask-server.py"  
     },
     {
