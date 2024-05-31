@@ -1,18 +1,23 @@
-import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import * as tf from '@tensorflow/tfjs';
+import React, { useRef, useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
 import NavBar from './NavBar';
+import * as tf from "@tensorflow/tfjs";
 import Onboard from './Onboard';
 
 export default function ImageUpload() {
+ /* const webcamRef = useRef(null);
+  const canvasRef = useRef(null);*/
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [error, setError] = useState('');
-  const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/bmp'];
-
+  const apiUrl = process.env.REACT_APP_API_URL;
+  
   const handleFileChange = (event) => {
     const file = event.target.files[0];
+    const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/bmp'];
 
     if (file && validTypes.includes(file.type)) {
       setSelectedFile(file);
@@ -28,41 +33,19 @@ export default function ImageUpload() {
       setError('No file selected or invalid file format.');
       return;
     }
-
+    const formData = new FormData();
+    formData.append('file', selectedFile);
     try {
-      const model = await tf.loadLayersModel('../../server/models/my_model.h5'); 
-      const image = await readImage(selectedFile);
-      const tensor = preprocessImage(image);
-      const prediction = model.predict(tensor);
-      const result = prediction.dataSync();
-
-      navigate('../result', { state: { result } });
+      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      navigate('../result', { state: { result: response.data } });
     } catch (error) {
-      console.error('Error processing the file', error);
-      setError('Error processing the file');
+      console.error('Error uploading the file', error);
+      setError('Error uploading the file');
     }
-  };
-
-  const readImage = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const img = new Image();
-        img.src = reader.result;
-        img.onload = () => resolve(img);
-        img.onerror = reject;
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  };
-
-  const preprocessImage = (image) => {
-    const tensor = tf.browser.fromPixels(image)
-      .resizeNearestNeighbor([256, 256]) // Change to the input size of your model
-      .toFloat()
-      .expandDims();
-    return tensor.div(255.0); // Normalize to [0, 1]
   };
 
   return (
@@ -76,12 +59,14 @@ export default function ImageUpload() {
               <h1>instant skin analysis</h1>
               <h2>smart scan. targeted care.</h2>
               <div className="scan-buttons">
-                <button onClick={handleUpload}>SCAN NOW</button>
+                
+                  <button onClick={handleUpload}>SCAN NOW</button>
+                
                 <button onClick={() => fileInputRef.current.click()}>UPLOAD IMAGE</button>
                 <input
                   type="file"
                   accept="image/*"
-                  style={{ display: 'none' }}
+                  style={{ display: 'None' }}
                   onChange={handleFileChange}
                   ref={fileInputRef}
                 />
