@@ -62,6 +62,14 @@ export default function ResultsPage() {
         setIngredients([]);
       }
     }
+    
+    // Cleanup function
+    return () => {
+      setIngredients([]);
+      setOpenPopupIndex(null);
+      setConditionName("");
+      setConditionTreatments(null);
+    };
   }, [result]);
 
   const openPopup = (index) => {
@@ -129,35 +137,6 @@ export default function ResultsPage() {
             </div>
           ))}
       </div>
-      // <div className="rec-container">
-      //   <h1>
-      //     We Recommend these products <p>from amazon.com</p>
-      //   </h1>
-      //   <div className="rec-ingred">
-      //     <h2>popular</h2>
-      //     <h2>niacinamide</h2>
-      //     <h2>azelaic acid</h2>
-      //     <h2>salicylic acid</h2>
-      //     <h2>benzoyl peroxide</h2>
-      //   </div>
-      //   <div className="amazon">
-      //     <div className="recs">
-      //       <h1>
-      //         product 1<h2>blah</h2>{" "}
-      //       </h1>
-      //     </div>
-      //     <div className="recs">
-      //       <h1>
-      //         product 2<h2>blah</h2>{" "}
-      //       </h1>
-      //     </div>
-      //     <div className="recs">
-      //       <h1>
-      //         product 3<h2>blah</h2>
-      //       </h1>
-      //     </div>
-      //   </div>
-      // </div>
     </div>
   );
 }
